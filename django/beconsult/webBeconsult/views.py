@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from .models import Carousel,JobOffer
+from .models import Carousel,JobOffer,Employees
 # Create your views here.
 all_JobOffer = JobOffer.objects.all
 all_Carousel = Carousel.objects.all
+all_Employees = Employees.objects.all
 
 ofertas = ({"autor": "autor1", "titulo": "titulo1", "descripcion": "descripcion1"},
             {"autor": "autor2", "titulo": "titulo2", "descripcion": "descripcion2"},
@@ -10,7 +11,7 @@ ofertas = ({"autor": "autor1", "titulo": "titulo1", "descripcion": "descripcion1
 
 
 def index(request):
-   return render(request,'webBeconsult/index.html', {"ofertas":all_JobOffer,"Carousel":all_Carousel})
+   return render(request,'webBeconsult/index.html', {"ofertas":all_JobOffer,"Carousels":all_Carousel,"empleados":all_Employees})
 
 def terminos(request):
    return render(request,'webBeconsult/terminos.html')

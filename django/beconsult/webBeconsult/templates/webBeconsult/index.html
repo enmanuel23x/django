@@ -1493,23 +1493,24 @@
                                 </div> <!-- .et_pb_column -->
                             </div> <!-- .et_pb_row -->
                             <div class="trabajar-beconsult et_pb_row et_pb_row_30">
+                                {% for empleado in empleados %}
                                 <div
                                     class="et_pb_column et_pb_column_1_5  et_pb_column_48 et_pb_css_mix_blend_mode_passthrough">
                                     <div class="et_pb_code et_pb_module foto1 et_pb_code_12">
                                         <div class="et_pb_code_inner">
-                                            <a class="popmake-230" href="#">
+                                            <a class="popmake-{{empleado.id}}" href="#">
                                                 <div class="box">
                                                     <!--EN ESTA LINEA CAMBIAR LA FOTO (SOLO LINK)-->
-                                                    <p><img src="{% static 'webBeconsult/img/empleados/empleado1.png' %}"
+                                                    <p><img src="static/{{ MEDIA_URL }}{{empleado.image}}"
                                                             alt="" /></p>
                                                     <div class="overbox">
                                                         <div class="tagline overtext">
                                                             <p class="mendo-links-description"><strong>
                                                                     <!--EN ESTA LINEA CAMBIAR EL NOMBRE DE LA PERSONA DE LA FOTO-->
-                                                                    Liubar Hurtado
+                                                                    {{empleado.name}}
                                                                 </strong><br>
                                                                 <!--EN ESTA LINEA CAMBIAR EL CARGO DE LA PERSONA DE LA FOTO-->
-                                                                Jefe de Seguridad y Salud Laboral
+                                                                {{empleado.title}}
                                                             </p>
                                                         </div>
                                                     </div>
@@ -1518,105 +1519,7 @@
                                         </div> <!-- .et_pb_code_inner -->
                                     </div> <!-- .et_pb_code -->
                                 </div> <!-- .et_pb_column -->
-                                <div
-                                    class="et_pb_column et_pb_column_1_5  et_pb_column_49 et_pb_css_mix_blend_mode_passthrough">
-                                    <div class="et_pb_code et_pb_module foto2 et_pb_code_13">
-                                        <div class="et_pb_code_inner">
-                                            <a class="popmake-235" href="#">
-                                                <div class="box">
-                                                    <!--EN ESTA LINEA CAMBIAR LA FOTO (SOLO LINK)-->
-                                                    <p><img src="{% static 'webBeconsult/img/empleados/empleado2.jpg' %}"
-                                                            alt="" /></p>
-                                                    <div class="overbox">
-                                                        <div class="tagline overtext">
-                                                            <p class="mendo-links-description"><strong>
-                                                                    <!--EN ESTA LINEA CAMBIAR EL NOMBRE DE LA PERSONA DE LA FOTO-->
-                                                                    Adrianna Garrido
-                                                                </strong><br>
-                                                                <!--EN ESTA LINEA CAMBIAR EL CARGO DE LA PERSONA DE LA FOTO-->
-                                                                Gerente de Legal
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div> <!-- .et_pb_code_inner -->
-                                    </div> <!-- .et_pb_code -->
-                                </div> <!-- .et_pb_column -->
-                                <div
-                                    class="et_pb_column et_pb_column_1_5  et_pb_column_50 et_pb_css_mix_blend_mode_passthrough">
-                                    <div class="et_pb_code et_pb_module foto3 et_pb_code_14">
-                                        <div class="et_pb_code_inner">
-                                            <a class="popmake-237" href="#">
-                                                <div class="box">
-                                                    <!--EN ESTA LINEA CAMBIAR LA FOTO (SOLO LINK)-->
-                                                    <p><img src="{% static 'webBeconsult/img/empleados/empleado3.png' %}"
-                                                            alt="" /></p>
-                                                    <div class="overbox">
-                                                        <div class="tagline overtext">
-                                                            <p class="mendo-links-description"><strong>
-                                                                    <!--EN ESTA LINEA CAMBIAR EL NOMBRE DE LA PERSONA DE LA FOTO-->
-                                                                    Jesús de Cámara
-                                                                </strong><br>
-                                                                <!--EN ESTA LINEA CAMBIAR EL CARGO DE LA PERSONA DE LA FOTO-->
-                                                                Contador
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div> <!-- .et_pb_code_inner -->
-                                    </div> <!-- .et_pb_code -->
-                                </div> <!-- .et_pb_column -->
-                                <div
-                                    class="et_pb_column et_pb_column_1_5  et_pb_column_51 et_pb_css_mix_blend_mode_passthrough">
-                                    <div class="et_pb_code et_pb_module foto4 et_pb_code_15">
-                                        <div class="et_pb_code_inner">
-                                            <a class="popmake-239" href="#">
-                                                <div class="box">
-                                                    <!--EN ESTA LINEA CAMBIAR LA FOTO (SOLO LINK)-->
-                                                    <p><img src="{% static 'webBeconsult/img/empleados/empleado4.jpg' %}"
-                                                            alt="" /></p>
-                                                    <div class="overbox">
-                                                        <div class="tagline overtext">
-                                                            <p class="mendo-links-description"><strong>
-                                                                    <!--EN ESTA LINEA CAMBIAR EL NOMBRE DE LA PERSONA DE LA FOTO-->
-                                                                    Daniela Rodríguez
-                                                                </strong><br>
-                                                                <!--EN ESTA LINEA CAMBIAR EL NOMBRE DE LA PERSONA DE LA FOTO-->
-                                                                Coord. Compensación y Beneficios</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div> <!-- .et_pb_code_inner -->
-                                    </div> <!-- .et_pb_code -->
-                                </div> <!-- .et_pb_column -->
-                                <div
-                                    class="et_pb_column et_pb_column_1_5 et_pb_column_52 et_pb_css_mix_blend_mode_passthrough et-last-child">
-                                    <div class="et_pb_code et_pb_module foto5 et_pb_code_16">
-                                        <div class="et_pb_code_inner">
-                                            <a class="popmake-386" href="#">
-                                                <div class="box">
-                                                    <!--EN ESTA LINEA CAMBIAR LA FOTO (SOLO LINK)-->
-                                                    <p><img src="{% static 'webBeconsult/img/empleados/empleado5.jpg' %}"
-                                                            alt="" /></p>
-                                                    <div class="overbox">
-                                                        <div class="tagline overtext">
-                                                            <p class="mendo-links-description"><strong>
-                                                                    <!--EN ESTA LINEA CAMBIAR EL NOMBRE DE LA PERSONA DE LA FOTO-->
-                                                                    Yucely Albarrán
-                                                                </strong><br>
-                                                                <!--EN ESTA LINEA CAMBIAR EL CARGO DE LA PERSONA DE LA FOTO-->
-                                                                Coordinador de Nómina
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div> <!-- .et_pb_code_inner -->
-                                    </div> <!-- .et_pb_code -->
-                                </div> <!-- .et_pb_column -->
+                                {% endfor %}
                             </div> <!-- .et_pb_row -->
                             <div class=" et_pb_row et_pb_row_31">
                                 <div
@@ -1782,17 +1685,17 @@
                                 class="et_pb_module et_pb_slider et_pb_post_slider et_pb_slider_no_pagination et_pb_slider_no_shadow et_pb_post_slider_image_background  et_pb_fullwidth_post_slider_0">
                                 <div class="et_pb_slides">
 
-                                    {% for item in Carousel %}
+                                    {% for Carousel in Carousels %}
                                     <div class="et_pb_slide et_pb_media_alignment_center et_pb_bg_layout_dark"
-                                        style="background-image:url({{item.image.url}})">
+                                        style="background-image:url(static/{{ MEDIA_URL }}{{Carousel.image}})">
                                         <div class="et_pb_container clearfix">
                                             <div class="et_pb_slider_container_inner">
                                                 <div class="et_pb_slide_description">
                                                     <h2 class="et_pb_slide_title"><a
-                                                            href="http://www.beconsult.com/beconsult_wp/?p=1491">{{ item.title }}</a></h2>
-                                                    <div class="et_pb_slide_content ">{{ item.description }}</div>
+                                                            href="http://www.beconsult.com/beconsult_wp/?p=1491">{{ Carousel.title }}</a></h2>
+                                                    <div class="et_pb_slide_content ">{{ Carousel.description }}</div>
                                                     <div class="et_pb_button_wrapper"><a
-                                                            href="http://www.beconsult.com/beconsult_wp/?p=1491"
+                                                            href="{{Carousel.url}}"
                                                             class="et_pb_more_button et_pb_button et_pb_custom_button_icon"
                                                             data-icon="&#x45;">LEER MÁS</a></div>
                                                 </div> <!-- .et_pb_slide_description -->
@@ -2088,7 +1991,7 @@
             <footer id="main-footer">
                 <div id="footer-bottom">
                     <div class="container clearfix">
-                        <div id="footer-info">© 2016 Beconsult, C.A. J-00003387-0. Todos los derechos reservados.
+                        <div id="footer-info">© 2020 Beconsult, C.A. J-00003387-0. Todos los derechos reservados.
                             Desarrollado por Analiticom Digital Strategies LLC<br><a
                                 href='http://www.beconsult.com/beconsult_wp/?page_id=292'>Términos y Condiciones</a>
                         </div>
@@ -2108,154 +2011,26 @@
                 X </button>
         </div>
     </div>
-    <div id="pum-386" class="pum pum-overlay pum-theme-224 pum-theme-default-theme popmake-overlay click_open"
-        data-popmake="{&quot;id&quot;:386,&quot;slug&quot;:&quot;foto-5&quot;,&quot;theme_id&quot;:224,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;&quot;,&quot;responsive_max_width&quot;:&quot;&quot;,&quot;custom_width&quot;:&quot;640&quot;,&quot;custom_height&quot;:&quot;380&quot;,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;location&quot;:&quot;center top&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width_unit&quot;:&quot;px&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;true&quot;,&quot;esc_press&quot;:&quot;true&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;}}}"
-        role="dialog" aria-hidden="true" aria-labelledby="pum_popup_title_386">
-        <div id="popmake-386"
+    {% for empleado in empleados %}
+    <div id="pum-{{empleado.id}}" class="pum pum-overlay pum-theme-224 pum-theme-default-theme popmake-overlay click_open"
+        data-popmake="{&quot;id&quot;:{{empleado.id}},&quot;slug&quot;:&quot;foto-1&quot;,&quot;theme_id&quot;:224,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;&quot;,&quot;responsive_max_width&quot;:&quot;&quot;,&quot;custom_width&quot;:&quot;640&quot;,&quot;custom_height&quot;:&quot;380&quot;,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;location&quot;:&quot;center top&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width_unit&quot;:&quot;px&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;X&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;true&quot;,&quot;esc_press&quot;:&quot;true&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;}}}"
+        role="dialog" aria-hidden="true" aria-labelledby="pum_popup_title_{{empleado.id}}">
+        <div id="popmake-1"
             class="pum-container popmake theme-224 pum-responsive pum-responsive-medium responsive size-medium">
-            <div id="pum_popup_title_386" class="pum-title popmake-title">
-                Yucely Albarrán - Coordinador de Nómina </div>
-            <div class="pum-content popmake-content">
-                <p>&nbsp;</p>
-                <p><img class="alignleft wp-image-1288" src="{% static 'webBeconsult/img/empleados/empleado5.jpg' %}"
-                        alt="" width="229" height="229" /></p>
-                <p><span style="font-weight: 400;">&#8220;Soy Licenciada en Administración de Recursos Humanos egresada
-                        de la UNSR y cuento con una Especialización en Derecho Laboral de la USM. Tengo 20 años de
-                        experiencia laboral, la cual he adquirido trabajando para Beconsult.</span></p>
-                <p><span style="font-weight: 400;">Aquí comencé como Aprendiz Inces y desde entonces he tenido la
-                        oportunidad de pasar por distintos cargos, lo que me ha permitido conocer varias áreas del
-                        negocio. Mis últimos 9 años han transcurrido en el área de nómina, donde inicié como Auxiliar y
-                        actualmente soy Coordinadora.</span></p>
-                <p><span style="font-weight: 400;">Lo que más me gusta de trabajar en Beconsult es que es una compañía
-                        con trayectoria, estable y para la cual sus colaboradores son lo primero. Trabajar en aquello
-                        que nos gusta es una de las mejores sensaciones que podemos experimentar a lo largo de nuestra
-                        carrera profesional y aquí he logrado sentirme así. </span></p>
-                <p><span style="font-weight: 400;">En esta empresa me proyecto transmitiendo los conocimientos que he
-                        adquirido, asumiendo nuevos retos, con pasión por lo que hago y desarrollando habilidades para
-                        desempeñar con excelencia mi trabajo.&#8221;</span></p>
-                <p>&nbsp;</p>
-            </div>
-            <button type="button" class="pum-close popmake-close" aria-label="Close">
-                X </button>
-        </div>
-    </div>
-    <div id="pum-239" class="pum pum-overlay pum-theme-224 pum-theme-default-theme popmake-overlay click_open"
-        data-popmake="{&quot;id&quot;:239,&quot;slug&quot;:&quot;foto-4&quot;,&quot;theme_id&quot;:224,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;&quot;,&quot;responsive_max_width&quot;:&quot;&quot;,&quot;custom_width&quot;:&quot;640&quot;,&quot;custom_height&quot;:&quot;380&quot;,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;location&quot;:&quot;center top&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width_unit&quot;:&quot;px&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;X&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;true&quot;,&quot;esc_press&quot;:&quot;true&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;}}}"
-        role="dialog" aria-hidden="true" aria-labelledby="pum_popup_title_239">
-        <div id="popmake-239"
-            class="pum-container popmake theme-224 pum-responsive pum-responsive-medium responsive size-medium">
-            <div id="pum_popup_title_239" class="pum-title popmake-title">
-                Daniela Rodríguez - Coordinador de Compensación y Beneficios </div>
-            <div class="pum-content popmake-content">
-                <p>&nbsp;</p>
-                <p><img class="wp-image-1379 alignleft" src="{% static 'webBeconsult/img/empleados/empleado4.jpg' %}"
-                        alt="" width="225" height="225" /></p>
-                <p><span style="font-weight: 400;">&#8220;Soy Industriólogo Ucabista y MSc. en Gerencia de RRHH y RRII,
-                        con más de 7 años de experiencia en el área de administración de personal en diferentes empresas
-                        de servicios y construcción.</span></p>
-                <p><span style="font-weight: 400;">Trabajo en Beconsult desde el 2017 y lo que más me gusta es la
-                        excelente atención al cliente, que se corresponde con sus valores
-                        organizacionales</span><i><span style="font-weight: 400;">.</span></i><span
-                        style="font-weight: 400;"> Desde el proceso de captación hasta las actividades del día a día,
-                        denotan el interés de la compañía por mantener motivado a sus colaboradores y potenciar las
-                        fortalezas de su talento humano.</span></p>
-                <p><span style="font-weight: 400;">En este tiempo he tenido la oportunidad de participar en diferentes
-                        actividades que me han permitido, no solo involucrarme con el proceso productivo de la compañía,
-                        sino con su gente, su historia y sus clientes. Trabajar en Beconsult es la oportunidad laboral
-                        perfecta para desarrollar las habilidades y destrezas profesionales del talento dinámico y
-                        proactivo, que busca aprender y valora el conocimiento.</span></p>
-                <p>En mi tiempo libre disfruto cocinar, en especial la repostería.&#8221;</p>
-                <p>&nbsp;</p>
-            </div>
-            <button type="button" class="pum-close popmake-close" aria-label="Close">
-                X </button>
-        </div>
-    </div>
-    <div id="pum-237" class="pum pum-overlay pum-theme-224 pum-theme-default-theme popmake-overlay click_open"
-        data-popmake="{&quot;id&quot;:237,&quot;slug&quot;:&quot;foto-3&quot;,&quot;theme_id&quot;:224,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;&quot;,&quot;responsive_max_width&quot;:&quot;&quot;,&quot;custom_width&quot;:&quot;640&quot;,&quot;custom_height&quot;:&quot;380&quot;,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;location&quot;:&quot;center top&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width_unit&quot;:&quot;px&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;X&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;true&quot;,&quot;esc_press&quot;:&quot;true&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;}}}"
-        role="dialog" aria-hidden="true" aria-labelledby="pum_popup_title_237">
-        <div id="popmake-237"
-            class="pum-container popmake theme-224 pum-responsive pum-responsive-medium responsive size-medium">
-            <div id="pum_popup_title_237" class="pum-title popmake-title">
-                Jesús de Cámara - Contador </div>
-            <div class="pum-content popmake-content">
-                <p><img class="wp-image-1847 size-medium alignleft"
-                        src="{% static 'webBeconsult/img/empleados/empleado3.png' %}" alt="" width="300" height="300" />
-                </p>
-                <p>“Soy Licenciado en Contaduría Pública de la Universidad Central de Venezuela, mi experiencia laboral
-                    está basada en registros contables, declaración y pago de impuestos, preparación de estados
-                    financieros históricos y ajustados por inflación.</p>
-                <p>Trabajo en Beconsult desde el 2015, inicié como Analista de Contabilidad, generando asientos
-                    contables, emisión de retenciones de IVA e ISLR y emisión de balances mensuales. Para el 2018 fui
-                    ascendido al cargo de Contador.
-                    Beconsult es una empresa con un ambiente laboral agradable que incluye los colaboradores y su
-                    infraestructura, esto permite que el trabajo se desarrolle de la mejor manera posible.</p>
-                <p>Trabajar aquí me ha permitido aprender que los objetivos deben cumplirse con excelencia.</p>
-                <p>En mi tiempo libre me gusta jugar dominó y fútbol.”</p>
-            </div>
-            <button type="button" class="pum-close popmake-close" aria-label="Close">
-                X </button>
-        </div>
-    </div>
-    <div id="pum-235" class="pum pum-overlay pum-theme-224 pum-theme-default-theme popmake-overlay click_open"
-        data-popmake="{&quot;id&quot;:235,&quot;slug&quot;:&quot;foto-2&quot;,&quot;theme_id&quot;:224,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;&quot;,&quot;responsive_max_width&quot;:&quot;&quot;,&quot;custom_width&quot;:&quot;640&quot;,&quot;custom_height&quot;:&quot;380&quot;,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;location&quot;:&quot;center top&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width_unit&quot;:&quot;px&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;X&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;true&quot;,&quot;esc_press&quot;:&quot;true&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;}}}"
-        role="dialog" aria-hidden="true" aria-labelledby="pum_popup_title_235">
-        <div id="popmake-235"
-            class="pum-container popmake theme-224 pum-responsive pum-responsive-medium responsive size-medium">
-            <div id="pum_popup_title_235" class="pum-title popmake-title">
-                Adrianna Garrido - Gerente de Legal </div>
-            <div class="pum-content popmake-content">
-                <p>&nbsp;</p>
-                <p><img class="wp-image-1377 alignleft" src="{% static 'webBeconsult/img/empleados/empleado2.jpg' %}"
-                        alt="" width="225" height="225" /></p>
-                <p><span style="font-weight: 400;">“Soy Abogado egresada de la UCAB y tengo 17 años de experiencia en el
-                        áre</span><span style="font-weight: 400;">a Legal trabajando para empresas del sector retail,
-                        moda y consultoría.</span><span style="font-weight: 400;"> </span></p>
-                <p><span style="font-weight: 400;">Inicié mi trayecto en la compañía en el 2015 como Asesor Legal,
-                        liderando el área de societario y contratos. Actualmente, estoy a cargo de la Gerencia Legal, un
-                        reto en el que he aprendido el valor de la comunicación directa con cada uno de nuestros
-                        clientes y la necesidad de una formación permanente para ofrecerles soluciones y alternativas
-                        que faciliten su operación.</span></p>
-                <p><span style="font-weight: 400;">Ser parte de esta compañía me ha permitido cumplir con dos metas
-                        importantes: mi crecimiento como profesional, manteniendo el equilibrio como mi vida personal y
-                        tener la oportunidad de ser parte del desarrollo de cada una de las personas que integran mi
-                        equipo.  </span></p>
-                <p><span style="font-weight: 400;">Lo que más disfruto hacer en mi tiempo libre es viajar.”</span></p>
-                <p>&nbsp;</p>
-            </div>
-            <button type="button" class="pum-close popmake-close" aria-label="Close">
-                X </button>
-        </div>
-    </div>
-    <div id="pum-230" class="pum pum-overlay pum-theme-224 pum-theme-default-theme popmake-overlay click_open"
-        data-popmake="{&quot;id&quot;:230,&quot;slug&quot;:&quot;foto-1&quot;,&quot;theme_id&quot;:224,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;&quot;,&quot;responsive_max_width&quot;:&quot;&quot;,&quot;custom_width&quot;:&quot;640&quot;,&quot;custom_height&quot;:&quot;380&quot;,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;location&quot;:&quot;center top&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width_unit&quot;:&quot;px&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;X&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;true&quot;,&quot;esc_press&quot;:&quot;true&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;}}}"
-        role="dialog" aria-hidden="true" aria-labelledby="pum_popup_title_230">
-        <div id="popmake-230"
-            class="pum-container popmake theme-224 pum-responsive pum-responsive-medium responsive size-medium">
-            <div id="pum_popup_title_230" class="pum-title popmake-title">
-                Liubar Hurtado- Jefe de Seguridad y Salud Laboral </div>
+            <div id="pum_popup_title_{{empleado.id}}" class="pum-title popmake-title">
+                {{empleado.name}} - {{empleado.title}} </div>
             <div class="pum-content popmake-content">
                 <p>&nbsp;</p>
                 <p><img class="wp-image-1763 size-medium alignleft" title="Liubar Hurtado"
-                        src="{% static 'webBeconsult/img/empleados/empleado1.png' %}" alt="" width="300" height="300" />
+                        src="static/{{ MEDIA_URL }}{{empleado.image}}" alt="" width="300" height="300" />
                 </p>
-                <p>“Soy Ingeniero Industrial de la UNEXPO y Especialista en Higiene Ocupacional de la UCV, mi
-                    experiencia laboral de 15 años ha sido en empresas líderes en sus ramos como lo son el ferretero,
-                    textil, televisivo y consultoría.</p>
-                <p>Laboro en Beconsult desde el 2007 cuando inicié como Especialista en Seguridad y Salud Laboral, luego
-                    como Coordinador de esa área y actualmente como Jefe de SSL y Servicios Generales. Valoro en esta
-                    compañía el apoyo que brindan para desarrollar tu máximo potencial como persona y profesional, eso
-                    me ha permitido participar en importantes proyectos y actividades, que luego hemos podemos
-                    transmitir a nuestros clientes para ayudarlos a cumplir sus objetivos.</p>
-                <p>Cada día de trabajo en Beconsult es una oportunidad de proponer soluciones y resolver problemas que
-                    cada vez te hacen más resiliente, ¡como la empresa!</p>
-                <p>En mi tiempo libre, me gusta jugar baloncesto, trotar, leer y por supuesto compartir en familia.”</p>
-                <p>&nbsp;</p>
+                <p>{{empleado.description}}</p>
             </div>
             <button type="button" class="pum-close popmake-close" aria-label="Close">
                 X </button>
         </div>
     </div>
+    {% endfor %}
     <script src="{% static 'webBeconsult/js/JS/custom-5.js' %}"></script>
     <script src="{% static 'webBeconsult/js/JS/custom-6.js' %}"></script>
     <script type='text/javascript' src="{% static 'webBeconsult/js/js-WordPress/admin/custom.min.js' %}"></script>

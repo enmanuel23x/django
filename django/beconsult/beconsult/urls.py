@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^terminos/', views.terminos),
     url(r'^$', views.index),
 ]
-urlpatterns += static(settings.MEDIA_URL, documentS_root=settings.MEDIA_ROOT)
+if True:
+    urlpatterns += static(settings.MEDIA_URL, documentS_root=settings.MEDIA_ROOT)
