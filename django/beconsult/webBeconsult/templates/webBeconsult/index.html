@@ -1,0 +1,2275 @@
+<!DOCTYPE html>
+
+<html lang="es-ES">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Beconsult</title>
+    <!-- Custom-1 CSS-->
+    <link rel="stylesheet" href="{% static 'webBeconsult/css/custom-1.css' %}">
+    <!-- Custom-1 CSS-->
+    <link rel='stylesheet' id='bxslider-css-css'
+        href="{% static 'webBeconsult/css/plugins/kiwi-logo-carousel/jquery.bxslider/jquery.bxslider.css' %}"
+        type='text/css' media='' />
+    <link rel='stylesheet' id='kiwi-logo-carousel-styles-css'
+        href="{% static 'webBeconsult/css/plugins/kiwi-logo-carousel/custom-styles.css' %}" type='text/css' media='' />
+    <link rel='stylesheet' id='popup-maker-site-css'
+        href="{% static 'webBeconsult/css/plugins/popup-maker/site.min.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='chosen-css' href="{% static 'webBeconsult/css/plugins/chosen/chosen.min.css' %}"
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-job-manager-frontend-css'
+        href="{% static 'webBeconsult/css/plugins/wp-job-manager/frontend.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='divi-style-css' href="{% static 'webBeconsult/css/Divi/style.css' %}" type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='popmake-remote-content-css-css'
+        href="{% static 'webBeconsult/css/plugins/popup-maker-remote-content/styles.min.css' %}" type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='dashicons-css'
+        href="{% static 'webBeconsult/css/plugins/wp-includes/dashicons.min.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='sb_dcl_custom_css-css'
+        href="{% static 'webBeconsult/css/plugins/divi_extended_column_layouts/style.css' %}" type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='sb_dpb_custom_css-css'
+        href="{% static 'webBeconsult/css/plugins/divi_popup_builder/style.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' id='sb_dpb_colorbox_css-css'
+        href="{% static 'webBeconsult/css/plugins/divi_popup_builder/colorbox/colorbox.css' %}" type='text/css'
+        media='all' />
+    <link rel="stylesheet" href="{% static 'webBeconsult/fonts/fontawesome-all.min.css' %}">
+    <script type='text/javascript' src="{% static 'webBeconsult/js/js-WordPress/jquery/jquery.js' %}"></script>
+    <script type='text/javascript' src="{% static 'webBeconsult/js/js-WordPress/jquery/jquery-migrate.min.js' %}">
+    </script>
+    <!-- Custom-3 JS -->
+    <script src="{% static 'webBeconsult/js/JS/custom-3.js' %}"></script>
+    <script src="https://kit.fontawesome.com/7e2392751d.js' %}" crossorigin="anonymous"></script>
+    <!-- Custom-3 JS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="shortcut icon" href="{% static 'webBeconsult/img/favicon.png' %}" />
+    <!-- Custom-2 -->
+    <link rel="stylesheet" href="{% static 'webBeconsult/css/custom-2.css' %}">
+    <!-- Custom-3 -->
+    <link rel="stylesheet" href="{% static 'webBeconsult/css/custom-3.css' %}">
+    <!-- CSS intelix -->
+    <link rel="stylesheet" href="{% static 'webBeconsult/css/intstyle.css' %}">
+</head>
+
+<body
+    class="home page-template-default page page-id-40 et_pb_button_helper_class et_fullwidth_nav et_fixed_nav et_show_nav et_cover_background et_pb_gutter linux et_pb_gutters3 et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_pb_footer_columns1 et_header_style_left et_pb_pagebuilder_layout et_right_sidebar et_divi_theme divi et_minified_js et_minified_css">
+    <div id="page-container">
+        
+        <header id="main-header" data-height-onload="80">
+            <div class="header">
+                <div class="logo_container">
+                    <span class="logo_helper"></span>
+                    <a href="/">
+                        <img src="{% static 'webBeconsult/img/logo.png' %}" alt="Beconsult" id="logo"
+                            data-height-percentage="54" />
+                    </a>
+                </div>
+                <div class="navbar" id="et-top-navigation" data-height="80" data-fixed-height="40">
+                    <nav id="top-menu-nav">
+                        <ul id="top-menu" class="nav">
+                            <li id="menu-item-100"
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100"><a
+                                    href="#about">QUIÉNES SOMOS</a></li>
+                            <li id="menu-item-101"
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-101"><a
+                                    href="#servicios">SERVICIOS</a></li>
+                            <li id="menu-item-102"
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-102"><a
+                                    href="#captacion">CAPTACIÓN</a></li>
+                            <li id="menu-item-840"
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-840"><a
+                                    href="#beneficios">BENEFICIOS</a></li>
+                            <li id="menu-item-590"
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-590"><a
+                                    href="#noticias">NOTICIAS</a></li>
+                            <li id="menu-item-104"
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-104"><a
+                                    href="#contacto">CLIENTES</a></li>
+                        </ul>
+                    </nav>
+                    <div id="et_mobile_nav_menu">
+                        <div class="mobile_nav closed">
+                            <span class="select_page">Seleccionar página</span>
+                            <span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+                        </div>
+                    </div>
+                </div> <!-- #et-top-navigation -->
+            </div> <!-- .container -->
+
+            <div class="et_search_outer">
+                <div class="container et_search_form_container">
+                    <form role="search" method="get" class="et-search-form"
+                        action="http://www.beconsult.com/beconsult_wp/">
+                        <input type="search" class="et-search-field" placeholder="Búsqueda &hellip;" value="" name="s"
+                            title="Buscar:" /> </form>
+                    <span class="et_close_search_field"></span>
+                </div>
+            </div>
+        </header> <!-- #main-header -->
+        <div id="et-main-area">
+            <div id="main-content">
+                <article id="post-40" class="post-40 page type-page status-publish hentry">
+                    <div class="entry-content">
+                        <div id="index"
+                            class="et_pb_section et_pb_fullwidth_section  et_pb_section_0 et_section_regular">
+                            <div
+                                class="et_pb_module et_pb_slider et_pb_slider_no_shadow et_pb_slider_show_image  et_pb_fullwidth_slider_0">
+                                <div class="et_pb_slides">
+                                    <div
+                                        class="et_pb_slide et_pb_bg_layout_dark et_pb_media_alignment_center et_pb_slide_0 et-pb-active-slide et_pb_section_parallax">
+                                        <span class="banner"></span>
+                                        <div class="et_pb_container clearfix">
+                                            <div class="et_pb_slider_container_inner">
+                                                <div class="et_pb_slide_description">
+                                                    <h2 class="et_pb_slide_title"><a href="#captacion">TENEMOS UN LUGAR
+                                                            PARA TI</a></h2>
+                                                    <div class="et_pb_slide_content"><span
+                                                            style="color: #ffffff;"><strong>Estamos buscando gente
+                                                                talentosa que se sume a nuestro equipo. Conoce nuestras
+                                                                ofertas de empleo</strong></span></div>
+                                                    <div class="et_pb_button_wrapper"><a href="#captacion"
+                                                            class="et_pb_more_button et_pb_button">VER MÁS</a></div>
+                                                </div> <!-- .et_pb_slide_description -->
+                                            </div>
+                                        </div> <!-- .et_pb_container -->
+                                    </div> <!-- .et_pb_slide -->
+                                </div> <!-- .et_pb_slides -->
+                            </div> <!-- .et_pb_slider -->
+                            <section id="about2"
+                                class="et_pb_fullwidth_header et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_fullwidth_header_0">
+                                <div class="et_pb_fullwidth_header_container left">
+                                </div>
+                                <div class="et_pb_fullwidth_header_overlay"></div>
+                                <div class="et_pb_fullwidth_header_scroll"></div>
+                            </section>
+                        </div> <!-- .et_pb_section -->
+                        <div class="et_pb_section  et_pb_section_1 et_pb_with_background et_section_regular">
+                            <div class=" et_pb_row et_pb_row_0 et_pb_row_fullwidth">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_0 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div id="about"
+                                        class="et_pb_module et_pb_space et_pb_divider_hidden et_pb_divider_0">
+                                        <div class="et_pb_divider_internal"></div>
+                                    </div>
+                                    <div id="servicios2"
+                                        class="et_pb_module et_pb_slider et_pb_slider_fullwidth_off et_pb_slider_no_pagination et_pb_slider_no_shadow  et_pb_slider_0">
+                                        <div class="et_pb_slides">
+                                            <div class="et_pb_slide et_pb_bg_layout_dark et_pb_media_alignment_center et_pb_slide_1 et-pb-active-slide"
+                                                data-arrows_color="#ffffff">
+                                                <div class="et_pb_container clearfix">
+                                                    <div class="et_pb_slider_container_inner">
+                                                        <div class="et_pb_slide_description">
+                                                            <h2 class="et_pb_slide_title">Visión</h2>
+                                                            <div class="et_pb_slide_content">
+                                                                <p style="text-align: center;"><span
+                                                                        style="color: #ffffff;">Ser una empresa de
+                                                                        servicios corporativos con un equipo de clase
+                                                                        mundial y clientes satisfechos.</span></p>
+                                                            </div>
+                                                        </div> <!-- .et_pb_slide_description -->
+                                                    </div>
+                                                </div> <!-- .et_pb_container -->
+                                            </div> <!-- .et_pb_slide -->
+                                            <div class="et_pb_slide et_pb_bg_layout_dark et_pb_media_alignment_center et_pb_slide_2"
+                                                data-arrows_color="#ffffff">
+                                                <div class="et_pb_container clearfix">
+                                                    <div class="et_pb_slider_container_inner">
+                                                        <div class="et_pb_slide_description">
+                                                            <h2 class="et_pb_slide_title">Misión</h2>
+                                                            <div class="et_pb_slide_content">
+                                                                <p style="text-align: center;"><span
+                                                                        style="color: #ffffff;">Crear soluciones para
+                                                                        potenciar la productividad y el valor de
+                                                                        nuestros clientes.</span></p>
+                                                            </div>
+                                                        </div> <!-- .et_pb_slide_description -->
+                                                    </div>
+                                                </div> <!-- .et_pb_container -->
+                                            </div> <!-- .et_pb_slide -->
+                                            <div class="et_pb_slide et_pb_bg_layout_dark et_pb_media_alignment_center et_pb_slide_3"
+                                                data-arrows_color="#ffffff">
+                                                <div class="et_pb_container clearfix">
+                                                    <div class="et_pb_slider_container_inner">
+                                                        <div class="et_pb_slide_description">
+                                                            <h2 class="et_pb_slide_title">Valores</h2>
+                                                            <div class="et_pb_slide_content">
+                                                                <p style="text-align: center;"><span
+                                                                        style="color: #ffffff;"> Servicio, Productividad
+                                                                        y Conocimiento.</span></p>
+                                                            </div>
+                                                        </div> <!-- .et_pb_slide_description -->
+                                                    </div>
+                                                </div> <!-- .et_pb_container -->
+                                            </div> <!-- .et_pb_slide -->
+                                        </div> <!-- .et_pb_slides -->
+                                    </div> <!-- .et_pb_slider -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                        </div> <!-- .et_pb_section -->
+                        <div class="et_pb_section  et_pb_section_2 et_pb_with_background et_section_regular">
+                            <div id="servicios" class=" et_pb_row et_pb_row_1">
+                                <div
+                                    class="et_pb_column et_pb_column_1_3  et_pb_column_1 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough">
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_3  et_pb_column_2 et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_0">
+                                        <div class="et_pb_text_inner">
+                                            <h1 style="text-align: center;"><strong><span
+                                                        style="color: #085795;">SERVICIOS</span></strong></h1>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_3  et_pb_column_3 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div class=" et_pb_row et_pb_row_2">
+                                <div
+                                    class="et_pb_column et_pb_column_1_3  et_pb_column_4 et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_blurb et_pb_module et_pb_bg_layout_light et_pb_text_align_center btn_contabilidad closed et_pb_blurb_0 et_pb_blurb_position_top et_pb_with_border">
+                                        <div class="et_pb_blurb_content">
+                                            <div class="et_pb_main_blurb_image"><a href="#"><span
+                                                        class="et_pb_image_wrap"><img
+                                                            src="{% static 'webBeconsult/img/servicios/contabilidad.png' %}"
+                                                            alt="" class="et-waypoint et_pb_animation_off" /></span></a>
+                                            </div>
+                                            <div class="et_pb_blurb_container">
+                                                <h4 class="et_pb_module_header"><a href="#">Contabilidad</a></h4>
+                                                <div class="et_pb_blurb_description">
+                                                </div><!-- .et_pb_blurb_description -->
+                                            </div>
+                                        </div> <!-- .et_pb_blurb_content -->
+                                    </div> <!-- .et_pb_blurb -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_3  et_pb_column_5 et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_blurb et_pb_module et_pb_bg_layout_light et_pb_text_align_center btn_finanzas closed et_pb_blurb_1 et_pb_blurb_position_top et_pb_with_border">
+                                        <div class="et_pb_blurb_content">
+                                            <div class="et_pb_main_blurb_image"><a href="#"><span
+                                                        class="et_pb_image_wrap"><img
+                                                            src="{% static 'webBeconsult/img/servicios/finanzas.png' %}"
+                                                            alt="" class="et-waypoint et_pb_animation_off" /></span></a>
+                                            </div>
+                                            <div class="et_pb_blurb_container">
+                                                <h4 class="et_pb_module_header"><a href="#">Finanzas</a></h4>
+                                                <div class="et_pb_blurb_description">
+                                                </div><!-- .et_pb_blurb_description -->
+                                            </div>
+                                        </div> <!-- .et_pb_blurb_content -->
+                                    </div> <!-- .et_pb_blurb -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_3  et_pb_column_6 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_blurb et_pb_module et_pb_bg_layout_light et_pb_text_align_center btn_legal closed et_pb_blurb_2 et_pb_blurb_position_top et_pb_with_border">
+                                        <div class="et_pb_blurb_content">
+                                            <div class="et_pb_main_blurb_image"><a href="#"><span
+                                                        class="et_pb_image_wrap"><img
+                                                            src="{% static 'webBeconsult/img/servicios/legal.png' %}"
+                                                            alt="" class="et-waypoint et_pb_animation_off" /></span></a>
+                                            </div>
+                                            <div class="et_pb_blurb_container">
+                                                <h4 class="et_pb_module_header"><a href="#">Legal</a></h4>
+                                                <div class="et_pb_blurb_description">
+                                                </div><!-- .et_pb_blurb_description -->
+                                            </div>
+                                        </div> <!-- .et_pb_blurb_content -->
+                                    </div> <!-- .et_pb_blurb -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div id="cont_web" class=" et_pb_row et_pb_row_3">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_7 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_1">
+                                        <div class="et_pb_text_inner">
+                                            <style>
+                                                td {
+                                                    border: none !important;
+                                                }
+
+                                                table {
+                                                    border: none !important;
+                                                }
+
+                                                tbody {
+                                                    border: none !important;
+                                                }
+
+                                                tr {
+                                                    border: none !important;
+                                                }
+
+                                                img {
+                                                    margin-bottom: 20px !important;
+                                                }
+                                            </style>
+                                            <table style="width: 100%; border: none !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="width: 40%;"><img
+                                                                class="aligncenter wp-image-1788 size-full"
+                                                                src="{% static 'webBeconsult/img/servicios/contabilidad.png' %}"
+                                                                alt="" width="125" height="125" /></p>
+                                                            <h2 style="text-align: center;"><span
+                                                                    style="color: #085795;"><span
+                                                                        style="color: #085795;">Contabilidad</span></span>
+                                                            </h2>
+                                                        </td>
+                                                        <td
+                                                            style="padding-left: 7%; border-left: 1px solid #4c4c4c !important; text-align: left;">
+                                                            Ofrecemos gestión de auditorías y servicios de contabilidad,
+                                                            garantizando a nuestros clientes la emisión de información
+                                                            financiera para la toma de decisiones; así como el
+                                                            cumplimiento de la normativa contable, fiscal y las
+                                                            políticas de la empresa.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div class="et_pb_code et_pb_module  et_pb_code_0">
+                                        <div class="et_pb_code_inner">
+                                            <script type="text/javascript">
+                                                jQuery(document).ready(function () {
+                                                    // Hide the div
+                                                    jQuery('#cont_web').hide();
+                                                    jQuery('.btn_contabilidad').click(function (e) {
+                                                        jQuery('#sist_web').hide();
+                                                        jQuery('#pers_web').hide();
+                                                        jQuery('#legal_web').hide();
+                                                        jQuery('#fin_web').hide();
+                                                        jQuery('#accionistas_web').hide();
+                                                        e.preventDefault();
+                                                        jQuery("#cont_web").slideToggle();
+                                                        jQuery('.btn_contabilidad').toggleClass(
+                                                            'opened closed');
+                                                    });
+                                                });
+                                            </script>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div id="fin_web" class=" et_pb_row et_pb_row_4">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_8 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_2">
+                                        <div class="et_pb_text_inner">
+                                            <style>
+                                                td {
+                                                    border: none !important;
+                                                }
+
+                                                table {
+                                                    border: none !important;
+                                                }
+
+                                                tbody {
+                                                    border: none !important;
+                                                }
+
+                                                tr {
+                                                    border: none !important;
+                                                }
+
+                                                img {
+                                                    margin-bottom: 20px !important;
+                                                }
+                                            </style>
+                                            <table style="width: 100%; border: none !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="width: 40%;"><img
+                                                                class="aligncenter wp-image-1790 size-full"
+                                                                src="{% static 'webBeconsult/img/servicios/finanzas.png' %}"
+                                                                alt="" width="125" height="125" /></p>
+                                                            <h2 style="text-align: center;"><span
+                                                                    style="color: #085795;"><span
+                                                                        style="color: #085795;">Finanzas</span></span>
+                                                            </h2>
+                                                        </td>
+                                                        <td
+                                                            style="padding-left: 7%; border-left: 1px solid #4c4c4c !important;">
+                                                            Brindamos a nuestros clientes asesoría financiera y
+                                                            gestionamos sus fondos para asegurar su disponibilidad y
+                                                            óptimo rendimiento. Gestionamos y asesoramos en la
+                                                            contratación de pólizas de seguros de diversa índole.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div class="et_pb_code et_pb_module  et_pb_code_1">
+                                        <div class="et_pb_code_inner">
+                                            <script type="text/javascript">
+                                                jQuery(document).ready(function () {
+                                                    // Hide the div
+                                                    jQuery('#fin_web').hide();
+                                                    jQuery('.btn_finanzas').click(function (e) {
+                                                        jQuery('#sist_web').hide();
+                                                        jQuery('#pers_web').hide();
+                                                        jQuery('#legal_web').hide();
+                                                        jQuery('#cont_web').hide();
+                                                        jQuery('#accionistas_web').hide();
+                                                        e.preventDefault();
+                                                        jQuery("#fin_web").slideToggle();
+                                                        jQuery('.btn_finanzas').toggleClass(
+                                                            'opened closed');
+                                                    });
+                                                });
+                                            </script>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div id="legal_web" class=" et_pb_row et_pb_row_5">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_9 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_3">
+                                        <div class="et_pb_text_inner">
+                                            <style>
+                                                td {
+                                                    border: none !important;
+                                                }
+
+                                                table {
+                                                    border: none !important;
+                                                }
+
+                                                tbody {
+                                                    border: none !important;
+                                                }
+
+                                                tr {
+                                                    border: none !important;
+                                                }
+
+                                                img {
+                                                    margin-bottom: 20px !important;
+                                                }
+                                            </style>
+                                            <table style="width: 100%; border: none !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="width: 40%;"><img
+                                                                class="aligncenter wp-image-1799 size-full"
+                                                                src="{% static 'webBeconsult/img/servicios/legal.png' %}"
+                                                                alt="" width="125" height="125" /></p>
+                                                            <h2 style="text-align: center;"><span
+                                                                    style="color: #085795;"><span
+                                                                        style="color: #085795;">Legal</span></span></h2>
+                                                        </td>
+                                                        <td
+                                                            style="padding-left: 7%; border-left: 1px solid #4c4c4c !important;">
+                                                            Generamos soluciones legales para nuestros clientes y
+                                                            accionistas en las áreas mercantil, propiedad intelectual,
+                                                            tributaria y laboral e incorporamos las mejores prácticas de
+                                                            gobierno corporativo, con la finalidad de potenciar su
+                                                            productividad y valor.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div class="et_pb_code et_pb_module  et_pb_code_2">
+                                        <div class="et_pb_code_inner">
+                                            <script type="text/javascript">
+                                                jQuery(document).ready(function () {
+                                                    // Hide the div
+                                                    jQuery('#legal_web').hide();
+                                                    jQuery('.btn_legal').click(function (e) {
+                                                        jQuery('#sist_web').hide();
+                                                        jQuery('#pers_web').hide();
+                                                        jQuery('#fin_web').hide();
+                                                        jQuery('#cont_web').hide();
+                                                        jQuery('#accionistas_web').hide();
+                                                        e.preventDefault();
+                                                        jQuery("#legal_web").slideToggle();
+                                                        jQuery('.btn_legal').toggleClass(
+                                                            'opened closed');
+                                                    });
+                                                });
+                                            </script>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div class=" et_pb_row et_pb_row_6">
+                                <div
+                                    class="et_pb_column et_pb_column_1_3  et_pb_column_10 et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_blurb et_pb_module et_pb_bg_layout_light et_pb_text_align_center btn_sistemas closed et_pb_blurb_3 et_pb_blurb_position_top et_pb_with_border">
+                                        <div class="et_pb_blurb_content">
+                                            <div class="et_pb_main_blurb_image"><a href="#"><span
+                                                        class="et_pb_image_wrap"><img
+                                                            src="{% static 'webBeconsult/img/servicios/sistemas.png' %}"
+                                                            alt="" class="et-waypoint et_pb_animation_off" /></span></a>
+                                            </div>
+                                            <div class="et_pb_blurb_container">
+                                                <h4 class="et_pb_module_header"><a href="#">Sistemas</a></h4>
+                                                <div class="et_pb_blurb_description">
+                                                </div><!-- .et_pb_blurb_description -->
+                                            </div>
+                                        </div> <!-- .et_pb_blurb_content -->
+                                    </div> <!-- .et_pb_blurb -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_3  et_pb_column_11 et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_blurb et_pb_module et_pb_bg_layout_light et_pb_text_align_center btn_personal closed et_pb_blurb_4 et_pb_blurb_position_top et_pb_with_border">
+                                        <div class="et_pb_blurb_content">
+                                            <div class="et_pb_main_blurb_image"><a href="#"><span
+                                                        class="et_pb_image_wrap"><img
+                                                            src="{% static 'webBeconsult/img/servicios/personal.png' %}"
+                                                            alt="" class="et-waypoint et_pb_animation_off" /></span></a>
+                                            </div>
+                                            <div class="et_pb_blurb_container">
+                                                <h4 class="et_pb_module_header"><a href="#">Personal</a></h4>
+                                                <div class="et_pb_blurb_description">
+                                                </div><!-- .et_pb_blurb_description -->
+                                            </div>
+                                        </div> <!-- .et_pb_blurb_content -->
+                                    </div> <!-- .et_pb_blurb -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_3  et_pb_column_12 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_blurb et_pb_module et_pb_bg_layout_light et_pb_text_align_center btn_accionistas closed et_pb_blurb_5 et_pb_blurb_position_top et_pb_with_border">
+                                        <div class="et_pb_blurb_content">
+                                            <div class="et_pb_main_blurb_image"><a href="#"><span
+                                                        class="et_pb_image_wrap"><img
+                                                            src="{% static 'webBeconsult/img/servicios/accionistas.png' %}"
+                                                            alt="" class="et-waypoint et_pb_animation_off" /></span></a>
+                                            </div>
+                                            <div class="et_pb_blurb_container">
+                                                <h4 class="et_pb_module_header"><a href="#">Accionistas</a></h4>
+                                                <div class="et_pb_blurb_description">
+                                                </div><!-- .et_pb_blurb_description -->
+                                            </div>
+                                        </div> <!-- .et_pb_blurb_content -->
+                                    </div> <!-- .et_pb_blurb -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div id="sist_web" class=" et_pb_row et_pb_row_7">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_13 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_4">
+                                        <div class="et_pb_text_inner">
+                                            <style>
+                                                td {
+                                                    border: none !important;
+                                                }
+
+                                                table {
+                                                    border: none !important;
+                                                }
+
+                                                tbody {
+                                                    border: none !important;
+                                                }
+
+                                                tr {
+                                                    border: none !important;
+                                                }
+
+                                                img {
+                                                    margin-bottom: 20px !important;
+                                                }
+                                            </style>
+                                            <table style="width: 100%; border: none !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="width: 40%;"><img
+                                                                class="aligncenter wp-image-1800 size-full"
+                                                                src="{% static 'webBeconsult/img/servicios/sistemas.png' %}"
+                                                                alt="" width="125" height="125" /></p>
+                                                            <h2 style="text-align: center;"><span
+                                                                    style="color: #085795;"><span
+                                                                        style="color: #085795;">Sistemas</span></span>
+                                                            </h2>
+                                                        </td>
+                                                        <td
+                                                            style="padding-left: 7%; border-left: 1px solid #4c4c4c !important;">
+                                                            Planificamos, dirigimos y garantizamos a nuestros clientes
+                                                            óptimas estrategias, metodologías y estándares de procesos
+                                                            de negocio y su automatización.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div class="et_pb_code et_pb_module  et_pb_code_3">
+                                        <div class="et_pb_code_inner">
+                                            <script type="text/javascript">
+                                                jQuery(document).ready(function () {
+                                                    // Hide the div
+                                                    jQuery('#sist_web').hide();
+                                                    jQuery('.btn_sistemas').click(function (e) {
+                                                        jQuery('#fin_web').hide();
+                                                        jQuery('#pers_web').hide();
+                                                        jQuery('#legal_web').hide();
+                                                        jQuery('#cont_web').hide();
+                                                        jQuery('#accionistas_web').hide();
+                                                        e.preventDefault();
+                                                        jQuery("#sist_web").slideToggle();
+                                                        jQuery('.btn_sistemas').toggleClass(
+                                                            'opened closed');
+                                                    });
+                                                });
+                                            </script>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div id="pers_web" class=" et_pb_row et_pb_row_8">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_14 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_5">
+                                        <div class="et_pb_text_inner">
+                                            <style>
+                                                td {
+                                                    border: none !important;
+                                                }
+
+                                                table {
+                                                    border: none !important;
+                                                }
+
+                                                tbody {
+                                                    border: none !important;
+                                                }
+
+                                                tr {
+                                                    border: none !important;
+                                                }
+
+                                                img {
+                                                    margin-bottom: 20px !important;
+                                                }
+                                            </style>
+                                            <table style="width: 100%; border: none !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="width: 40%;"><img
+                                                                class="aligncenter wp-image-1796 size-full"
+                                                                src="{% static 'webBeconsult/img/servicios/personal.png' %}"
+                                                                alt="" width="125" height="125" /></p>
+                                                            <h2 style="text-align: center;"><span
+                                                                    style="color: #085795;"><span
+                                                                        style="color: #085795;">Personal </span></span>
+                                                            </h2>
+                                                        </td>
+                                                        <td
+                                                            style="padding-left: 7%; border-left: 1px solid #4c4c4c !important;">
+                                                            Apoyamos y asesoramos a nuestros clientes en materia de
+                                                            captación, compensación y beneficios, desarrollo, seguridad
+                                                            y salud laboral y desarrollo organizacional; para garantizar
+                                                            el talento necesario.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div class="et_pb_code et_pb_module  et_pb_code_4">
+                                        <div class="et_pb_code_inner">
+                                            <script type="text/javascript">
+                                                jQuery(document).ready(function () {
+                                                    // Hide the div
+                                                    jQuery('#pers_web').hide();
+                                                    jQuery('.btn_personal').click(function (e) {
+                                                        jQuery("#cont_web").hide();
+                                                        jQuery("#fin_web").hide();
+                                                        jQuery("#legal_web").hide();
+                                                        jQuery("#sist_web").hide();
+                                                        jQuery('#accionistas_web').hide();
+                                                        e.preventDefault();
+                                                        jQuery("#pers_web").slideToggle();
+                                                        jQuery('.btn_personal').toggleClass(
+                                                            'opened closed');
+                                                    });
+                                                });
+                                            </script>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div id="accionistas_web" class=" et_pb_row et_pb_row_9">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_15 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_6">
+                                        <div class="et_pb_text_inner">
+                                            <style>
+                                                td {
+                                                    border: none !important;
+                                                }
+
+                                                table {
+                                                    border: none !important;
+                                                }
+
+                                                tbody {
+                                                    border: none !important;
+                                                }
+
+                                                tr {
+                                                    border: none !important;
+                                                }
+
+                                                img {
+                                                    margin-bottom: 20px !important;
+                                                }
+                                            </style>
+                                            <table style="width: 100%; border: none !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="width: 40%;"><img
+                                                                class="wp-image-1802 size-full aligncenter"
+                                                                src="{% static 'webBeconsult/img/servicios/accionistas.png' %}"
+                                                                alt="" width="125" height="125" /></p>
+                                                            <h2 style="text-align: center;"><span
+                                                                    style="color: #085795;"><span
+                                                                        style="color: #085795;">Accionistas</span></span>
+                                                            </h2>
+                                                        </td>
+                                                        <td
+                                                            style="padding-left: 7%; border-left: 1px solid #4c4c4c !important;">
+                                                            Optimizamos la relación entre los accionistas y la compañía
+                                                            a través del desarrollo de procesos de comunicación,
+                                                            atención y celebración de asambleas. Generamos soluciones en
+                                                            materia de re-estructuraciones y re-agrupaciones
+                                                            accionarias.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div class="et_pb_code et_pb_module  et_pb_code_5">
+                                        <div class="et_pb_code_inner">
+                                            <script type="text/javascript">
+                                                jQuery(document).ready(function () {
+                                                    // Hide the div
+                                                    jQuery('#accionistas_web').hide();
+                                                    jQuery('.btn_accionistas').click(function (e) {
+                                                        jQuery("#cont_web").hide();
+                                                        jQuery("#fin_web").hide();
+                                                        jQuery("#legal_web").hide();
+                                                        jQuery("#sist_web").hide();
+                                                        jQuery('#pers_web').hide();
+                                                        e.preventDefault();
+                                                        jQuery("#accionistas_web").slideToggle();
+                                                        jQuery('.btn_accionistas').toggleClass(
+                                                            'opened closed');
+                                                    });
+                                                });
+                                            </script>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                        </div> <!-- .et_pb_section -->
+                        <div class="et_pb_section  et_pb_section_3 et_pb_with_background et_section_regular">
+                            <div id="servicios" class=" et_pb_row et_pb_row_10">
+                                <div
+                                    class="et_pb_column et_pb_column_1_3  et_pb_column_16 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough">
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_3  et_pb_column_17 et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_7">
+                                        <div class="et_pb_text_inner">
+                                            <h1 style="text-align: center;"><strong><span
+                                                        style="color: #085795;">SERVICIOS</span></strong></h1>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_3  et_pb_column_18 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div class=" et_pb_row et_pb_row_11">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_19 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_blurb et_pb_module et_pb_bg_layout_light et_pb_text_align_center mbtn_contabilidad closed et_pb_blurb_6 et_pb_blurb_position_top et_pb_with_border">
+                                        <div class="et_pb_blurb_content">
+                                            <div class="et_pb_main_blurb_image"><a href="#"><span
+                                                        class="et_pb_image_wrap"><img
+                                                            src="{% static 'webBeconsult/img/servicios/contabilidad.png' %}"
+                                                            alt="" class="et-waypoint et_pb_animation_off" /></span></a>
+                                            </div>
+                                            <div class="et_pb_blurb_container">
+                                                <h4 class="et_pb_module_header"><a href="#">Contabilidad</a></h4>
+                                                <div class="et_pb_blurb_description">
+                                                </div><!-- .et_pb_blurb_description -->
+                                            </div>
+                                        </div> <!-- .et_pb_blurb_content -->
+                                    </div> <!-- .et_pb_blurb -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div id="cont_mob" class=" et_pb_row et_pb_row_12">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_20 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_8">
+                                        <div class="et_pb_text_inner">
+                                            <style>
+                                                td {
+                                                    border: none !important;
+                                                }
+
+                                                table {
+                                                    border: none !important;
+                                                }
+
+                                                tbody {
+                                                    border: none !important;
+                                                }
+
+                                                tr {
+                                                    border: none !important;
+                                                }
+
+                                                img {
+                                                    margin-bottom: 20px !important;
+                                                }
+                                            </style>
+                                            <table style="width: 100%; border: none !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td
+                                                            style="padding-left: 7%; border-left: 1px solid #4c4c4c !important;">
+                                                            <h2 style="text-align: center;"><span
+                                                                    style="color: #085795;">Contabilidad</span></h2>
+                                                            <p>Brindamos a nuestros clientes asesoría financiera y/o
+                                                                gestionamos sus fondos para asegurar su disponibilidad
+                                                                oportuna y óptimo rendimiento. Adicionalmente,
+                                                                gestionamos y asesoramos en la contratación de pólizas
+                                                                de seguros.
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div class="et_pb_code et_pb_module  et_pb_code_6">
+                                        <div class="et_pb_code_inner">
+                                            <script type="text/javascript">
+                                                jQuery(document).ready(function () {
+                                                    // Hide the div
+                                                    jQuery('#cont_mob').hide();
+                                                    jQuery('.mbtn_contabilidad').click(function (e) {
+                                                        jQuery("#fin_mob").hide();
+                                                        jQuery("#legal_mob").hide();
+                                                        jQuery("#sist_mob").hide();
+                                                        jQuery("#pers_mob").hide();
+                                                        jQuery('#accionistas_mob').hide();
+                                                        e.preventDefault();
+                                                        jQuery("#cont_mob").slideToggle();
+                                                        jQuery('.mbtn_contabilidad').toggleClass(
+                                                            'opened closed');
+                                                    });
+                                                });
+                                            </script>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div class=" et_pb_row et_pb_row_13">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_21 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_blurb et_pb_module et_pb_bg_layout_light et_pb_text_align_center mbtn_finanzas closed et_pb_blurb_7 et_pb_blurb_position_top et_pb_with_border">
+                                        <div class="et_pb_blurb_content">
+                                            <div class="et_pb_main_blurb_image"><a href="#"><span
+                                                        class="et_pb_image_wrap"><img
+                                                            src="{% static 'webBeconsult/img/servicios/finanzas.png' %}"
+                                                            alt="" class="et-waypoint et_pb_animation_off" /></span></a>
+                                            </div>
+                                            <div class="et_pb_blurb_container">
+                                                <h4 class="et_pb_module_header"><a href="#">Finanzas</a></h4>
+                                                <div class="et_pb_blurb_description">
+                                                </div><!-- .et_pb_blurb_description -->
+                                            </div>
+                                        </div> <!-- .et_pb_blurb_content -->
+                                    </div> <!-- .et_pb_blurb -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div id="fin_mob" class=" et_pb_row et_pb_row_14">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_22 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_9">
+                                        <div class="et_pb_text_inner">
+                                            <style>
+                                                td {
+                                                    border: none !important;
+                                                }
+
+                                                table {
+                                                    border: none !important;
+                                                }
+
+                                                tbody {
+                                                    border: none !important;
+                                                }
+
+                                                tr {
+                                                    border: none !important;
+                                                }
+
+                                                img {
+                                                    margin-bottom: 20px !important;
+                                                }
+                                            </style>
+                                            <table style="width: 100%; border: none !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td
+                                                            style="padding-left: 7%; border-left: 1px solid #4c4c4c !important;">
+                                                            <h2 style="text-align: center;"><span
+                                                                    style="color: #085795;"><span
+                                                                        style="color: #085795;">Finanzas</span></span>
+                                                            </h2>
+                                                            <p>Brindamos a nuestros clientes asesoría financiera y/o
+                                                                gestionamos sus fondos para asegurar su disponibilidad
+                                                                oportuna y óptimo rendimiento. Adicionalmente,
+                                                                gestionamos y asesoramos en la contratación de pólizas
+                                                                de seguros.
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div class="et_pb_code et_pb_module  et_pb_code_7">
+                                        <div class="et_pb_code_inner">
+                                            <script type="text/javascript">
+                                                jQuery(document).ready(function () {
+                                                    // Hide the div
+                                                    jQuery('#fin_mob').hide();
+                                                    jQuery('.mbtn_finanzas').click(function (e) {
+                                                        jQuery("#cont_mob").hide();
+                                                        jQuery("#legal_mob").hide();
+                                                        jQuery("#sist_mob").hide();
+                                                        jQuery("#pers_mob").hide();
+                                                        jQuery('#accionistas_mob').hide();
+                                                        e.preventDefault();
+                                                        jQuery("#fin_mob").slideToggle();
+                                                        jQuery('.mbtn_finanzas').toggleClass(
+                                                            'opened closed');
+                                                    });
+                                                });
+                                            </script>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div class=" et_pb_row et_pb_row_15">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_23 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_blurb et_pb_module et_pb_bg_layout_light et_pb_text_align_center mbtn_legal closed et_pb_blurb_8 et_pb_blurb_position_top et_pb_with_border">
+                                        <div class="et_pb_blurb_content">
+                                            <div class="et_pb_main_blurb_image"><a href="#"><span
+                                                        class="et_pb_image_wrap"><img
+                                                            src="{% static 'webBeconsult/img/servicios/legal.png' %}"
+                                                            alt="" class="et-waypoint et_pb_animation_off" /></span></a>
+                                            </div>
+                                            <div class="et_pb_blurb_container">
+                                                <h4 class="et_pb_module_header"><a href="#">Legal</a></h4>
+                                                <div class="et_pb_blurb_description">
+                                                </div><!-- .et_pb_blurb_description -->
+                                            </div>
+                                        </div> <!-- .et_pb_blurb_content -->
+                                    </div> <!-- .et_pb_blurb -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div id="legal_mob" class=" et_pb_row et_pb_row_16">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_24 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_10">
+                                        <div class="et_pb_text_inner">
+                                            <style>
+                                                td {
+                                                    border: none !important;
+                                                }
+
+                                                table {
+                                                    border: none !important;
+                                                }
+
+                                                tbody {
+                                                    border: none !important;
+                                                }
+
+                                                tr {
+                                                    border: none !important;
+                                                }
+
+                                                img {
+                                                    margin-bottom: 20px !important;
+                                                }
+                                            </style>
+                                            <table style="width: 100%; border: none !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td
+                                                            style="padding-left: 7%; border-left: 1px solid #4c4c4c !important;">
+                                                            <h2 style="text-align: center;"><span
+                                                                    style="color: #085795;"><span
+                                                                        style="color: #085795;">Legal</span></span></h2>
+                                                            <p>Generamos soluciones legales para nuestros clientes y
+                                                                accionistas en las áreas mercantil, propiedad
+                                                                intelectual, tributaria y laboral e incorporamos las
+                                                                mejores prácticas de gobierno corporativo, con la
+                                                                finalidad de potenciar su productividad y valor.
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div class="et_pb_code et_pb_module  et_pb_code_8">
+                                        <div class="et_pb_code_inner">
+                                            <script type="text/javascript">
+                                                jQuery(document).ready(function () {
+                                                    // Hide the div
+                                                    jQuery('#legal_mob').hide();
+                                                    jQuery('.mbtn_legal').click(function (e) {
+                                                        jQuery("#cont_mob").hide();
+                                                        jQuery("#fin_mob").hide();
+                                                        jQuery("#sist_mob").hide();
+                                                        jQuery("#pers_mob").hide();
+                                                        jQuery('#accionistas_mob').hide();
+                                                        e.preventDefault();
+                                                        jQuery("#legal_mob").slideToggle();
+                                                        jQuery('.mbtn_legal').toggleClass(
+                                                            'opened closed');
+                                                    });
+                                                });
+                                            </script>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div class=" et_pb_row et_pb_row_17">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_25 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_blurb et_pb_module et_pb_bg_layout_light et_pb_text_align_center mbtn_sistemas closed et_pb_blurb_9 et_pb_blurb_position_top et_pb_with_border">
+                                        <div class="et_pb_blurb_content">
+                                            <div class="et_pb_main_blurb_image"><a href="#"><span
+                                                        class="et_pb_image_wrap"><img
+                                                            src="{% static 'webBeconsult/img/servicios/sistemas.png' %}"
+                                                            alt="" class="et-waypoint et_pb_animation_off" /></span></a>
+                                            </div>
+                                            <div class="et_pb_blurb_container">
+                                                <h4 class="et_pb_module_header"><a href="#">Sistemas</a></h4>
+                                                <div class="et_pb_blurb_description">
+                                                </div><!-- .et_pb_blurb_description -->
+                                            </div>
+                                        </div> <!-- .et_pb_blurb_content -->
+                                    </div> <!-- .et_pb_blurb -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div id="sist_mob" class=" et_pb_row et_pb_row_18">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_26 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_11">
+                                        <div class="et_pb_text_inner">
+                                            <style>
+                                                td {
+                                                    border: none !important;
+                                                }
+
+                                                table {
+                                                    border: none !important;
+                                                }
+
+                                                tbody {
+                                                    border: none !important;
+                                                }
+
+                                                tr {
+                                                    border: none !important;
+                                                }
+
+                                                img {
+                                                    margin-bottom: 20px !important;
+                                                }
+                                            </style>
+                                            <table style="width: 100%; border: none !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td
+                                                            style="padding-left: 7%; border-left: 1px solid #4c4c4c !important;">
+                                                            <h2 style="text-align: center;"><span
+                                                                    style="color: #085795;"><span
+                                                                        style="color: #085795;">Sistemas</span></span>
+                                                            </h2>
+                                                            <p>Planificamos, dirigimos y garantizamos a nuestros
+                                                                clientes óptimas estrategias, metodologías y estándares
+                                                                de procesos de negocio y su automatización.
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div class="et_pb_code et_pb_module  et_pb_code_9">
+                                        <div class="et_pb_code_inner">
+                                            <script type="text/javascript">
+                                                jQuery(document).ready(function () {
+                                                    // Hide the div
+                                                    jQuery('#sist_mob').hide();
+                                                    jQuery('.mbtn_sistemas').click(function (e) {
+                                                        jQuery("#cont_mob").hide();
+                                                        jQuery("#fin_mob").hide();
+                                                        jQuery("#legal_mob").hide();
+                                                        jQuery("#pers_mob").hide();
+                                                        jQuery('#accionistas_mob').hide();
+                                                        e.preventDefault();
+                                                        jQuery("#sist_mob").slideToggle();
+                                                        jQuery('.mbtn_sistemas').toggleClass(
+                                                            'opened closed');
+                                                    });
+                                                });
+                                            </script>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div class=" et_pb_row et_pb_row_19">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_27 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_blurb et_pb_module et_pb_bg_layout_light et_pb_text_align_center mbtn_personal closed et_pb_blurb_10 et_pb_blurb_position_top et_pb_with_border">
+                                        <div class="et_pb_blurb_content">
+                                            <div class="et_pb_main_blurb_image"><a href="#"><span
+                                                        class="et_pb_image_wrap"><img
+                                                            src="{% static 'webBeconsult/img/servicios/personal.png' %}"
+                                                            alt="" class="et-waypoint et_pb_animation_off" /></span></a>
+                                            </div>
+                                            <div class="et_pb_blurb_container">
+                                                <h4 class="et_pb_module_header"><a href="#">Personal</a></h4>
+                                                <div class="et_pb_blurb_description">
+                                                </div><!-- .et_pb_blurb_description -->
+                                            </div>
+                                        </div> <!-- .et_pb_blurb_content -->
+                                    </div> <!-- .et_pb_blurb -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div id="pers_mob" class=" et_pb_row et_pb_row_20">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_28 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_12">
+                                        <div class="et_pb_text_inner">
+                                            <style>
+                                                td {
+                                                    border: none !important;
+                                                }
+
+                                                table {
+                                                    border: none !important;
+                                                }
+
+                                                tbody {
+                                                    border: none !important;
+                                                }
+
+                                                tr {
+                                                    border: none !important;
+                                                }
+
+                                                img {
+                                                    margin-bottom: 20px !important;
+                                                }
+                                            </style>
+                                            <table style="width: 100%; border: none !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td
+                                                            style="padding-left: 7%; border-left: 1px solid #4c4c4c !important;">
+                                                            <h2 style="text-align: center;"><span
+                                                                    style="color: #085795;"><span
+                                                                        style="color: #085795;">Personal</span></span>
+                                                            </h2>
+                                                            <p>Apoyamos y asesoramos a nuestros clientes en materia de
+                                                                captación, compensación y beneficios, desarrollo,
+                                                                seguridad y salud laboral y desarrollo organizacional;
+                                                                para garantizar el talento necesario.
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div class="et_pb_code et_pb_module  et_pb_code_10">
+                                        <div class="et_pb_code_inner">
+                                            <script type="text/javascript">
+                                                jQuery(document).ready(function () {
+                                                    // Hide the div
+                                                    jQuery('#pers_mob').hide();
+                                                    jQuery('.mbtn_personal').click(function (e) {
+                                                        jQuery("#cont_mob").hide();
+                                                        jQuery("#fin_mob").hide();
+                                                        jQuery("#legal_mob").hide();
+                                                        jQuery("#sist_mob").hide();
+                                                        jQuery('#accionistas_mob').hide();
+                                                        e.preventDefault();
+                                                        jQuery("#pers_mob").slideToggle();
+                                                        jQuery('.mbtn_personal').toggleClass(
+                                                            'opened closed');
+                                                    });
+                                                });
+                                            </script>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div class=" et_pb_row et_pb_row_21">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_29 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_blurb et_pb_module et_pb_bg_layout_light et_pb_text_align_center mbtn_accionistas closed et_pb_blurb_11 et_pb_blurb_position_top et_pb_with_border">
+                                        <div class="et_pb_blurb_content">
+                                            <div class="et_pb_main_blurb_image"><a href="#"><span
+                                                        class="et_pb_image_wrap"><img
+                                                            src="{% static 'webBeconsult/img/servicios/accionistas.png' %}"
+                                                            alt="" class="et-waypoint et_pb_animation_off" /></span></a>
+                                            </div>
+                                            <div class="et_pb_blurb_container">
+                                                <h4 class="et_pb_module_header"><a href="#">Accionistas</a></h4>
+                                                <div class="et_pb_blurb_description">
+                                                </div><!-- .et_pb_blurb_description -->
+                                            </div>
+                                        </div> <!-- .et_pb_blurb_content -->
+                                    </div> <!-- .et_pb_blurb -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div id="accionistas_mob" class=" et_pb_row et_pb_row_22">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_30 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_13">
+                                        <div class="et_pb_text_inner">
+                                            <style>
+                                                td {
+                                                    border: none !important;
+                                                }
+
+                                                table {
+                                                    border: none !important;
+                                                }
+
+                                                tbody {
+                                                    border: none !important;
+                                                }
+
+                                                tr {
+                                                    border: none !important;
+                                                }
+
+                                                img {
+                                                    margin-bottom: 20px !important;
+                                                }
+                                            </style>
+                                            <table style="width: 100%; border: none !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td
+                                                            style="padding-left: 7%; border-left: 1px solid #4c4c4c !important;">
+                                                            <h2 style="text-align: center;"><span
+                                                                    style="color: #085795;">Accionistas</span></h2>
+                                                            <p>Optimizamos la relación entre los accionistas y la
+                                                                compañía a través del desarrollo de procesos de
+                                                                comunicación, atención y celebración de asambleas.
+                                                                Generamos soluciones en materia de re-estructuraciones y
+                                                                re-agrupaciones accionarias.
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div class="et_pb_code et_pb_module  et_pb_code_11">
+                                        <div class="et_pb_code_inner">
+                                            <script type="text/javascript">
+                                                jQuery(document).ready(function () {
+                                                    // Hide the div
+                                                    jQuery('#accionistas_mob').hide();
+                                                    jQuery('.mbtn_accionistas').click(function (e) {
+                                                        jQuery("#cont_mob").hide();
+                                                        jQuery("#fin_mob").hide();
+                                                        jQuery("#legal_mob").hide();
+                                                        jQuery("#sist_mob").hide();
+                                                        jQuery('#pers_mob').hide();
+                                                        e.preventDefault();
+                                                        jQuery("#accionistas_mob").slideToggle();
+                                                        jQuery('.mbtn_accionistas').toggleClass(
+                                                            'opened closed');
+                                                    });
+                                                });
+                                            </script>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                        </div> <!-- .et_pb_section -->
+                        <div class="et_pb_section  et_pb_section_4 et_section_regular">
+                            <div class=" et_pb_row et_pb_row_23 et_pb_equal_columns et_pb_row_fullwidth">
+                                <div
+                                    class="et_pb_column et_pb_column_1_4  et_pb_column_31 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough">
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_2  et_pb_column_32 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough">
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_4  et_pb_column_33 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div id="captacion" class=" et_pb_row et_pb_row_24">
+                                <div
+                                    class="et_pb_column et_pb_column_3_4  et_pb_column_34 et_pb_css_mix_blend_mode_passthrough">
+                                    <div class="et_pb_module et_pb_space et_pb_divider_hidden et_pb_divider_1">
+                                        <div class="et_pb_divider_internal"></div>
+                                    </div>
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_4  et_pb_column_35 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div class=" et_pb_row et_pb_row_25 et_pb_equal_columns et_pb_row_fullwidth">
+                                <div
+                                    class="et_pb_column et_pb_column_1_4  et_pb_column_36 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough">
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_2  et_pb_column_37 et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_14">
+                                        <div class="et_pb_text_inner">
+                                            <p>
+                                                <!--
+
+
+<h3><strong>Captación</strong></h3>
+
+
+-->
+                                            </p>
+                                            <h1 style="text-align: center;"><strong><span
+                                                        style="color: #085795;">TENEMOS UN LUGAR PARA TI&nbsp;&nbsp;<a
+                                                            href="{% static 'webBeconsult/img/whatsapp-logo-variant-2.png' %}"
+                                                            alt="" width="31" height="31"></a>
+                                                    </span></strong></h1>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_4  et_pb_column_38 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div id="captacion" class=" et_pb_row et_pb_row_26">
+                                <div
+                                    class="et_pb_column et_pb_column_2_3  et_pb_column_39 et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_module et_pb_image et-waypoint et_animated et_animated et_animated et_animated et_animated et_pb_image_0 et_always_center_on_mobile et_pb_image_sticky">
+                                        <span class="et_pb_image_wrap"><img
+                                                src="{% static 'webBeconsult/img/bg2.jpg' %}" alt="" /></span>
+                                    </div>
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_3  et_pb_column_40 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_15">
+                                        <div class="et_pb_text_inner">
+                                            <h3><strong>Captación</strong></h3>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div class="et_pb_module et_pb_accordion  et_pb_accordion_0 et_pb_text_align_left">
+                                        <div
+                                            class="et_pb_module et_pb_toggle et_pb_toggle_open  et_pb_accordion_item_0 et_pb_accordion_item">
+                                            <h5 class="et_pb_toggle_title">CERRADOS</h5>
+                                            <div class="et_pb_toggle_content clearfix">
+                                            </div> <!-- .et_pb_toggle_content -->
+                                        </div> <!-- .et_pb_toggle -->
+                                        
+                                        {% for oferta in ofertas %}
+
+                                        <div
+                                            class="et_pb_module et_pb_toggle et_pb_toggle_close  et_pb_accordion_item_1 et_pb_accordion_item">
+                                            <h5 class="et_pb_toggle_title">{{ oferta.title }}</h5>
+                                            <div class="et_pb_toggle_content clearfix">
+                                                <div id="newhere9" class="clearfix et_pb_popup_builder_17 et_pb_module">
+                                                    {{ oferta.description }}
+                                                </div>
+                                                <div> </div>
+                                                <div class="clearfix et_pb_popup_builder_17 et_pb_module">
+                                                    <p><strong>{{ oferta.profile }}</strong></p>
+                                                    <ul>
+                                                        <li>Abogado</li>
+                                                        <li>Cursando o con postgrado en Derecho Tributario.</li>
+                                                        <li>Experiencia mínima: 5 años en materia tributaria.</li>
+                                                    </ul>
+                                                </div>
+                                                <div><a href="http://www.beconsult.com/beconsult_wp/?page_id=1998/"
+                                                        target="_blank" rel="noopener"><span
+                                                            class="sb_pb_modal_button">APLICAR</span></a></div>
+                                            </div> <!-- .et_pb_toggle_content -->
+                                        </div> <!-- .et_pb_toggle -->
+
+                                        {% endfor %}
+                                        
+                                        
+                                    </div> <!-- .et_pb_accordion -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div id="captacion" class=" et_pb_row et_pb_row_27">
+                                <div
+                                    class="et_pb_column et_pb_column_3_4  et_pb_column_41 et_pb_css_mix_blend_mode_passthrough">
+                                    <div class="et_pb_module et_pb_space et_pb_divider_hidden et_pb_divider_2">
+                                        <div class="et_pb_divider_internal"></div>
+                                    </div>
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_4  et_pb_column_42 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div id="captacion" class=" et_pb_row et_pb_row_28">
+                                <div
+                                    class="et_pb_column et_pb_column_3_4  et_pb_column_43 et_pb_css_mix_blend_mode_passthrough">
+                                    <div class="et_pb_module et_pb_space et_pb_divider_hidden et_pb_divider_3">
+                                        <div class="et_pb_divider_internal"></div>
+                                    </div>
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_4  et_pb_column_44 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                        </div> <!-- .et_pb_section -->
+                        <div class="et_pb_section  et_pb_section_5 et_section_regular">
+                            <div class=" et_pb_row et_pb_row_29 et_pb_equal_columns et_pb_row_fullwidth">
+                                <div
+                                    class="et_pb_column et_pb_column_1_4  et_pb_column_45 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough">
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_2  et_pb_column_46 et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_16">
+                                        <div class="et_pb_text_inner">
+                                            <p>
+                                                <!--
+
+
+<h3><strong>Captación</strong></h3>
+
+
+-->
+                                            </p>
+                                            <h1 style="text-align: center;"><strong><span
+                                                        style="color: #085795;">TRABAJAR EN BECONSULT</span></strong>
+                                            </h1>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_4  et_pb_column_47 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div class="trabajar-beconsult et_pb_row et_pb_row_30">
+                                <div
+                                    class="et_pb_column et_pb_column_1_5  et_pb_column_48 et_pb_css_mix_blend_mode_passthrough">
+                                    <div class="et_pb_code et_pb_module foto1 et_pb_code_12">
+                                        <div class="et_pb_code_inner">
+                                            <a class="popmake-230" href="#">
+                                                <div class="box">
+                                                    <!--EN ESTA LINEA CAMBIAR LA FOTO (SOLO LINK)-->
+                                                    <p><img src="{% static 'webBeconsult/img/empleados/empleado1.png' %}"
+                                                            alt="" /></p>
+                                                    <div class="overbox">
+                                                        <div class="tagline overtext">
+                                                            <p class="mendo-links-description"><strong>
+                                                                    <!--EN ESTA LINEA CAMBIAR EL NOMBRE DE LA PERSONA DE LA FOTO-->
+                                                                    Liubar Hurtado
+                                                                </strong><br>
+                                                                <!--EN ESTA LINEA CAMBIAR EL CARGO DE LA PERSONA DE LA FOTO-->
+                                                                Jefe de Seguridad y Salud Laboral
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_5  et_pb_column_49 et_pb_css_mix_blend_mode_passthrough">
+                                    <div class="et_pb_code et_pb_module foto2 et_pb_code_13">
+                                        <div class="et_pb_code_inner">
+                                            <a class="popmake-235" href="#">
+                                                <div class="box">
+                                                    <!--EN ESTA LINEA CAMBIAR LA FOTO (SOLO LINK)-->
+                                                    <p><img src="{% static 'webBeconsult/img/empleados/empleado2.jpg' %}"
+                                                            alt="" /></p>
+                                                    <div class="overbox">
+                                                        <div class="tagline overtext">
+                                                            <p class="mendo-links-description"><strong>
+                                                                    <!--EN ESTA LINEA CAMBIAR EL NOMBRE DE LA PERSONA DE LA FOTO-->
+                                                                    Adrianna Garrido
+                                                                </strong><br>
+                                                                <!--EN ESTA LINEA CAMBIAR EL CARGO DE LA PERSONA DE LA FOTO-->
+                                                                Gerente de Legal
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_5  et_pb_column_50 et_pb_css_mix_blend_mode_passthrough">
+                                    <div class="et_pb_code et_pb_module foto3 et_pb_code_14">
+                                        <div class="et_pb_code_inner">
+                                            <a class="popmake-237" href="#">
+                                                <div class="box">
+                                                    <!--EN ESTA LINEA CAMBIAR LA FOTO (SOLO LINK)-->
+                                                    <p><img src="{% static 'webBeconsult/img/empleados/empleado3.png' %}"
+                                                            alt="" /></p>
+                                                    <div class="overbox">
+                                                        <div class="tagline overtext">
+                                                            <p class="mendo-links-description"><strong>
+                                                                    <!--EN ESTA LINEA CAMBIAR EL NOMBRE DE LA PERSONA DE LA FOTO-->
+                                                                    Jesús de Cámara
+                                                                </strong><br>
+                                                                <!--EN ESTA LINEA CAMBIAR EL CARGO DE LA PERSONA DE LA FOTO-->
+                                                                Contador
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_5  et_pb_column_51 et_pb_css_mix_blend_mode_passthrough">
+                                    <div class="et_pb_code et_pb_module foto4 et_pb_code_15">
+                                        <div class="et_pb_code_inner">
+                                            <a class="popmake-239" href="#">
+                                                <div class="box">
+                                                    <!--EN ESTA LINEA CAMBIAR LA FOTO (SOLO LINK)-->
+                                                    <p><img src="{% static 'webBeconsult/img/empleados/empleado4.jpg' %}"
+                                                            alt="" /></p>
+                                                    <div class="overbox">
+                                                        <div class="tagline overtext">
+                                                            <p class="mendo-links-description"><strong>
+                                                                    <!--EN ESTA LINEA CAMBIAR EL NOMBRE DE LA PERSONA DE LA FOTO-->
+                                                                    Daniela Rodríguez
+                                                                </strong><br>
+                                                                <!--EN ESTA LINEA CAMBIAR EL NOMBRE DE LA PERSONA DE LA FOTO-->
+                                                                Coord. Compensación y Beneficios</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_5 et_pb_column_52 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div class="et_pb_code et_pb_module foto5 et_pb_code_16">
+                                        <div class="et_pb_code_inner">
+                                            <a class="popmake-386" href="#">
+                                                <div class="box">
+                                                    <!--EN ESTA LINEA CAMBIAR LA FOTO (SOLO LINK)-->
+                                                    <p><img src="{% static 'webBeconsult/img/empleados/empleado5.jpg' %}"
+                                                            alt="" /></p>
+                                                    <div class="overbox">
+                                                        <div class="tagline overtext">
+                                                            <p class="mendo-links-description"><strong>
+                                                                    <!--EN ESTA LINEA CAMBIAR EL NOMBRE DE LA PERSONA DE LA FOTO-->
+                                                                    Yucely Albarrán
+                                                                </strong><br>
+                                                                <!--EN ESTA LINEA CAMBIAR EL CARGO DE LA PERSONA DE LA FOTO-->
+                                                                Coordinador de Nómina
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div class=" et_pb_row et_pb_row_31">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_53 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div id="beneficios2"
+                                        class="et_pb_module et_pb_space et_pb_divider_hidden et_pb_divider_4">
+                                        <div class="et_pb_divider_internal"></div>
+                                    </div>
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                        </div> <!-- .et_pb_section -->
+                        <div id="beneficios"
+                            class="et_pb_section et_pb_inner_shadow et_pb_section_parallax  et_pb_section_6 et_pb_with_background et_section_regular">
+                            <div class=" et_pb_row et_pb_row_32">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_54 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_17">
+                                        <div class="et_pb_text_inner">
+                                            <h1 style="text-align: center;"><strong><span
+                                                        style="color: #085795;">BENEFICIOS</span></strong></h1>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div class="beneficios et_pb_row et_pb_row_33">
+                                <div
+                                    class="et_pb_column et_pb_column_1_5  et_pb_column_55 et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left btn_formacion et_animated et_animated et_animated et_animated et_animated et_pb_text_18">
+                                        <div class="et_pb_text_inner">
+                                            <h3 style="text-align: left; color: #085795; font-size: 16px;">FORMACIÓN Y
+                                                DESARROLLO</h3>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left btn_formacion et_animated et_animated et_animated et_animated et_animated et_pb_text_19">
+                                        <div class="et_pb_text_inner">
+                                            <div class="separador-beneficio"></div>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left btn_formacion et_animated et_animated et_animated et_animated et_animated et_pb_text_20">
+                                        <div class="et_pb_text_inner">
+                                            <p><span style="color: #085795;">Diseñamos y ejecutamos planes de
+                                                    crecimiento según tus necesidades y te acompañamos para que alcances
+                                                    tu máximo potencial</span></p>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_5  et_pb_column_56 et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left btn_formacion et_animated et_animated et_animated et_animated et_animated et_pb_text_21">
+                                        <div class="et_pb_text_inner">
+                                            <h3 style="text-align: left; color: #085795; font-size: 16px;">SALUD Y
+                                                BIENESTAR</h3>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left btn_formacion et_animated et_animated et_animated et_animated et_animated et_pb_text_22">
+                                        <div class="et_pb_text_inner">
+                                            <div class="separador-beneficio"></div>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left btn_formacion et_animated et_animated et_animated et_animated et_animated et_pb_text_23">
+                                        <div class="et_pb_text_inner">
+                                            <p style="text-align: left; color: #085795; font-size: 14px;"><span
+                                                    style="font-weight: 400;">Te ofrecemos una póliza de HCM con
+                                                    cobertura amplia, salón de deportes dentro de las instalaciones y
+                                                    actividades recreativas y de integración que contribuyen con tu
+                                                    bienestar</span></p>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_5  et_pb_column_57 et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left btn_formacion et_animated et_animated et_animated et_animated et_animated et_pb_text_24">
+                                        <div class="et_pb_text_inner">
+                                            <h3 style="text-align: left; color: #085795; font-size: 16px;">PROYECTOS
+                                                RETADORES</h3>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left btn_formacion et_animated et_animated et_animated et_animated et_animated et_pb_text_25">
+                                        <div class="et_pb_text_inner">
+                                            <div class="separador-beneficio"></div>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left btn_formacion et_animated et_animated et_animated et_animated et_animated et_pb_text_26">
+                                        <div class="et_pb_text_inner">
+                                            <p style="text-align: left; color: #085795; font-size: 14px;">Tendrás la
+                                                oportunidad de participar en proyectos retadores aportando nuevas ideas,
+                                                relacionándote con diferentes clientes y aprendiendo de ellos</p>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_5  et_pb_column_58 et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left btn_formacion et_animated et_animated et_animated et_animated et_animated et_pb_text_27">
+                                        <div class="et_pb_text_inner">
+                                            <h3 style="text-align: left; color: #085795; font-size: 16px;">
+                                                SOCIO-ECONÓMICOS</h3>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left btn_formacion et_animated et_animated et_animated et_animated et_animated et_pb_text_28">
+                                        <div class="et_pb_text_inner">
+                                            <div class="separador-beneficio"></div>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left btn_formacion et_animated et_animated et_animated et_animated et_animated et_pb_text_29">
+                                        <div class="et_pb_text_inner">
+                                            <p style="text-align: left; color: #085795; font-size: 14px;">Te ofrecemos 4
+                                                meses de utilidades, bono orientado a objetivos, beneficio de
+                                                alimentación superior al establecido en ley</p>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_5 et_pb_column_59 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left btn_formacion et_animated et_animated et_animated et_animated et_animated et_pb_text_30">
+                                        <div class="et_pb_text_inner">
+                                            <h3 style="text-align: left; color: #085795; font-size: 16px;">ESPACIOS
+                                                MODERNOS</h3>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left btn_formacion et_animated et_animated et_animated et_animated et_animated et_pb_text_31">
+                                        <div class="et_pb_text_inner">
+                                            <div class="separador-beneficio"></div>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left btn_formacion et_animated et_animated et_animated et_animated et_animated et_pb_text_32">
+                                        <div class="et_pb_text_inner">
+                                            <p><span style="color: #085795;">Te ofrecemos espacios abiertos y modernos,
+                                                    que incentivan el intercambio de ideas en un ambiente
+                                                    amigable</span></p>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                            <div class=" et_pb_row et_pb_row_34">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_60 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div id="noticias2"
+                                        class="et_pb_module et_pb_space et_pb_divider_hidden et_pb_divider_5">
+                                        <div class="et_pb_divider_internal"></div>
+                                    </div>
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                        </div> <!-- .et_pb_section -->
+                        <div id="noticias"
+                            class="et_pb_section et_pb_fullwidth_section  et_pb_section_7 et_section_regular">
+                            <div id="dm-slider"
+                                class="et_pb_module et_pb_slider et_pb_post_slider et_pb_slider_no_pagination et_pb_slider_no_shadow et_pb_post_slider_image_background  et_pb_fullwidth_post_slider_0">
+                                <div class="et_pb_slides">
+
+                                    {% for item in Carousel %}
+                                    <div class="et_pb_slide et_pb_media_alignment_center et_pb_bg_layout_dark"
+                                        style="background-image:url({{item.image.url}})">
+                                        <div class="et_pb_container clearfix">
+                                            <div class="et_pb_slider_container_inner">
+                                                <div class="et_pb_slide_description">
+                                                    <h2 class="et_pb_slide_title"><a
+                                                            href="http://www.beconsult.com/beconsult_wp/?p=1491">{{ item.title }}</a></h2>
+                                                    <div class="et_pb_slide_content ">{{ item.description }}</div>
+                                                    <div class="et_pb_button_wrapper"><a
+                                                            href="http://www.beconsult.com/beconsult_wp/?p=1491"
+                                                            class="et_pb_more_button et_pb_button et_pb_custom_button_icon"
+                                                            data-icon="&#x45;">LEER MÁS</a></div>
+                                                </div> <!-- .et_pb_slide_description -->
+                                            </div>
+                                        </div> <!-- .et_pb_container -->
+                                    </div> <!-- .et_pb_slide -->
+                                  {% endfor %}
+                                    
+                                </div> <!-- .et_pb_slides -->
+                            </div> <!-- .et_pb_slider -->
+                        </div> <!-- .et_pb_section -->
+                        <div class="et_pb_section  et_pb_section_8 et_section_regular">
+                            <div class=" et_pb_row et_pb_row_35">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4  et_pb_column_61 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_33">
+                                        <div class="et_pb_text_inner">
+                                            <h1 style="text-align: center;"><strong><span
+                                                        style="color: #085795;">EMPRESAS CLIENTES</span></strong></h1>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                    <div class="et_pb_code et_pb_module  et_pb_code_17">
+                                        <div class="et_pb_code_inner">
+                                            <ul
+                                                class="kiwi-logo-carousel kiwi-logo-carousel-carrusel_web default align-center col4">
+                                                <li style="height:150px;">
+                                                    <div class="helper" style="height:150px; width:250px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/abstracta.jpg' %}"
+                                                            alt="Abstracta" title="Abstracta"
+                                                            style="max-width:250px; padding-left: 10px; padding-right:10px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:150px;">
+                                                    <div class="helper" style="height:150px; width:250px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Alafletes.jpg' %}"
+                                                            alt="Alafletes" title="Alafletes"
+                                                            style="max-width:250px; padding-left: 10px; padding-right:10px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:150px;">
+                                                    <div class="helper" style="height:150px; width:250px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Amand.jpg' %}"
+                                                            alt="Amand" title="Amand"
+                                                            style="max-width:250px; padding-left: 10px; padding-right:10px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:150px;">
+                                                    <div class="helper" style="height:150px; width:250px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Beco.jpg' %}"
+                                                            alt="Beco" title="Beco"
+                                                            style="max-width:250px; padding-left: 10px; padding-right:10px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:150px;">
+                                                    <div class="helper" style="height:150px; width:250px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Beval.png' %}"
+                                                            alt="Beval" title="Beval"
+                                                            style="max-width:250px; padding-left: 10px; padding-right:10px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:150px;">
+                                                    <div class="helper" style="height:150px; width:250px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/boconcept.jpg' %}"
+                                                            alt="BoConcept" title="BoConcept"
+                                                            style="max-width:250px; padding-left: 10px; padding-right:10px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:150px;">
+                                                    <div class="helper" style="height:150px; width:250px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Capuy.png' %}"
+                                                            alt="Capuy" title="Capuy"
+                                                            style="max-width:250px; padding-left: 10px; padding-right:10px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:150px;">
+                                                    <div class="helper" style="height:150px; width:250px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/EPA.png' %}"
+                                                            alt="Epa" title="Epa"
+                                                            style="max-width:250px; padding-left: 10px; padding-right:10px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:150px;">
+                                                    <div class="helper" style="height:150px; width:250px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Febeca.png' %}"
+                                                            alt="Febeca" title="Febeca"
+                                                            style="max-width:250px; padding-left: 10px; padding-right:10px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:150px;">
+                                                    <div class="helper" style="height:150px; width:250px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Fru-fru.png' %}"
+                                                            alt="Fru Fru" title="Fru Fru"
+                                                            style="max-width:250px; padding-left: 10px; padding-right:10px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:150px;">
+                                                    <div class="helper" style="height:150px; width:250px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/KC.jpg' %}"
+                                                            alt="Kid Cool" title="Kid Cool"
+                                                            style="max-width:250px; padding-left: 10px; padding-right:10px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:150px;">
+                                                    <div class="helper" style="height:150px; width:250px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/NICOLE.jpg' %}"
+                                                            alt="Nicole" title="Nicole"
+                                                            style="max-width:250px; padding-left: 10px; padding-right:10px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:150px;">
+                                                    <div class="helper" style="height:150px; width:250px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/PT.jpg' %}"
+                                                            alt="Promotora Tántalo" title="Promotora Tántalo"
+                                                            style="max-width:250px; padding-left: 10px; padding-right:10px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:150px;">
+                                                    <div class="helper" style="height:150px; width:250px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Servicom.png' %}"
+                                                            alt="Servicom" title="Servicom"
+                                                            style="max-width:250px; padding-left: 10px; padding-right:10px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:150px;">
+                                                    <div class="helper" style="height:150px; width:250px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Servinave.jpg' %}"
+                                                            alt="Servinave" title="Servinave"
+                                                            style="max-width:250px; padding-left: 10px; padding-right:10px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:150px;">
+                                                    <div class="helper" style="height:150px; width:250px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Sillaca.png' %}"
+                                                            alt="Sillaca" title="Sillaca"
+                                                            style="max-width:250px; padding-left: 10px; padding-right:10px">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                    <div class="et_pb_code et_pb_module  et_pb_code_18">
+                                        <div class="et_pb_code_inner">
+                                            <ul
+                                                class="kiwi-logo-carousel kiwi-logo-carousel-carrusel_mobile default align-center col4">
+                                                <li style="height:50px;">
+                                                    <div class="helper" style="height:50px; width:200px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/abstracta.jpg' %}"
+                                                            alt="Abstracta" title="Abstracta"
+                                                            style="max-width:200px; padding-left: 5px; padding-right:5px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:50px;">
+                                                    <div class="helper" style="height:50px; width:200px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Alafletes.jpg' %}"
+                                                            alt="Alafletes" title="Alafletes"
+                                                            style="max-width:200px; padding-left: 5px; padding-right:5px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:50px;">
+                                                    <div class="helper" style="height:50px; width:200px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Amand.jpg' %}"
+                                                            alt="Amand" title="Amand"
+                                                            style="max-width:200px; padding-left: 5px; padding-right:5px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:50px;">
+                                                    <div class="helper" style="height:50px; width:200px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Beco.jpg' %}"
+                                                            alt="Beco" title="Beco"
+                                                            style="max-width:200px; padding-left: 5px; padding-right:5px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:50px;">
+                                                    <div class="helper" style="height:50px; width:200px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Beval.png' %}"
+                                                            alt="Beval" title="Beval"
+                                                            style="max-width:200px; padding-left: 5px; padding-right:5px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:50px;">
+                                                    <div class="helper" style="height:50px; width:200px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/boconcept.jpg' %}"
+                                                            alt="BoConcept" title="BoConcept"
+                                                            style="max-width:200px; padding-left: 5px; padding-right:5px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:50px;">
+                                                    <div class="helper" style="height:50px; width:200px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Capuy.png' %}"
+                                                            alt="Capuy" title="Capuy"
+                                                            style="max-width:200px; padding-left: 5px; padding-right:5px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:50px;">
+                                                    <div class="helper" style="height:50px; width:200px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/EPA.png' %}"
+                                                            alt="Epa" title="Epa"
+                                                            style="max-width:200px; padding-left: 5px; padding-right:5px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:50px;">
+                                                    <div class="helper" style="height:50px; width:200px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Febeca.png' %}"
+                                                            alt="Febeca" title="Febeca"
+                                                            style="max-width:200px; padding-left: 5px; padding-right:5px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:50px;">
+                                                    <div class="helper" style="height:50px; width:200px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Fru-fru.png' %}"
+                                                            alt="Fru Fru" title="Fru Fru"
+                                                            style="max-width:200px; padding-left: 5px; padding-right:5px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:50px;">
+                                                    <div class="helper" style="height:50px; width:200px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/KC.jpg' %}"
+                                                            alt="Kid Cool" title="Kid Cool"
+                                                            style="max-width:200px; padding-left: 5px; padding-right:5px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:50px;">
+                                                    <div class="helper" style="height:50px; width:200px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/NICOLE.jpg' %}"
+                                                            alt="Nicole" title="Nicole"
+                                                            style="max-width:200px; padding-left: 5px; padding-right:5px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:50px;">
+                                                    <div class="helper" style="height:50px; width:200px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/PT.jpg' %}"
+                                                            alt="Promotora Tántalo" title="Promotora Tántalo"
+                                                            style="max-width:200px; padding-left: 5px; padding-right:5px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:50px;">
+                                                    <div class="helper" style="height:50px; width:200px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Servicom.png' %}"
+                                                            alt="Servicom" title="Servicom"
+                                                            style="max-width:200px; padding-left: 5px; padding-right:5px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:50px;">
+                                                    <div class="helper" style="height:50px; width:200px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Servinave.jpg' %}"
+                                                            alt="Servinave" title="Servinave"
+                                                            style="max-width:200px; padding-left: 5px; padding-right:5px">
+                                                    </div>
+                                                </li>
+                                                <li style="height:50px;">
+                                                    <div class="helper" style="height:50px; width:200px;"><img
+                                                            src="{% static 'webBeconsult/img/clientes/Sillaca.png' %}"
+                                                            alt="Sillaca" title="Sillaca"
+                                                            style="max-width:200px; padding-left: 5px; padding-right:5px">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div> <!-- .et_pb_code_inner -->
+                                    </div> <!-- .et_pb_code -->
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                        </div> <!-- .et_pb_section -->
+                        <div id="contacto" class="et_pb_section  et_pb_section_10 et_section_regular">
+                            <div class=" et_pb_row et_pb_row_36">
+                                <div
+                                    class="et_pb_column et_pb_column_1_3  et_pb_column_62 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough">
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_3  et_pb_column_63 et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_34">
+                                        <div class="et_pb_text_inner">
+                                            <p><a href="https://ve.linkedin.com/company/beconsult-ca"><img
+                                                        class="alignnone size-full wp-image-217 aligncenter"
+                                                        src="{% static 'webBeconsult/img/favicon.png' %}" alt=""
+                                                        width="40" height="40" /></a></p>
+                                            <p> </p>
+                                            <p style="text-align: center;"><span
+                                                    style="color: #085795;">captacion@beconsult.com</span> <span
+                                                    style="color: #085795;">Caracas, Venezuela</span></p>
+                                        </div>
+                                    </div> <!-- .et_pb_text -->
+                                </div> <!-- .et_pb_column -->
+                                <div
+                                    class="et_pb_column et_pb_column_1_3  et_pb_column_64 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                </div> <!-- .et_pb_column -->
+                            </div> <!-- .et_pb_row -->
+                        </div> <!-- .et_pb_section -->
+                    </div> <!-- .entry-content -->
+                </article> <!-- .et_pb_post -->
+            </div> <!-- #main-content -->
+            <footer id="main-footer">
+                <div id="footer-bottom">
+                    <div class="container clearfix">
+                        <div id="footer-info">© 2016 Beconsult, C.A. J-00003387-0. Todos los derechos reservados.
+                            Desarrollado por Analiticom Digital Strategies LLC<br><a
+                                href='http://www.beconsult.com/beconsult_wp/?page_id=292'>Términos y Condiciones</a>
+                        </div>
+                    </div> <!-- .container -->
+                </div>
+            </footer> <!-- #main-footer -->
+        </div> <!-- #et-main-area -->
+    </div> <!-- #page-container -->
+    <div id="pum-1017" class="pum pum-overlay pum-theme-224 pum-theme-default-theme popmake-overlay click_open"
+        data-popmake="{&quot;id&quot;:1017,&quot;slug&quot;:&quot;aplicar&quot;,&quot;theme_id&quot;:224,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;a[href=\&quot;\&quot;]&quot;,&quot;do_default&quot;:null,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;custom&quot;,&quot;responsive_min_width&quot;:&quot;370&quot;,&quot;responsive_max_width&quot;:&quot;90&quot;,&quot;custom_width&quot;:&quot;90&quot;,&quot;scrollable_content&quot;:&quot;1&quot;,&quot;custom_height&quot;:&quot;700&quot;,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;location&quot;:&quot;center top&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;11&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;%&quot;,&quot;custom_width_unit&quot;:&quot;%&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;},&quot;remote_content&quot;:{&quot;enabled&quot;:&quot;true&quot;,&quot;type&quot;:&quot;iframe&quot;,&quot;function_name&quot;:&quot;&quot;,&quot;css_selector&quot;:&quot;&quot;,&quot;loading_icon&quot;:&quot;lines-1&quot;,&quot;defaults_set&quot;:&quot;true&quot;}}}"
+        role="dialog" aria-hidden="true">
+        <div id="popmake-1017"
+            class="pum-container popmake theme-224 size-custom pum-scrollable scrollable remote-content">
+            <div class="pum-content popmake-content">
+            </div>
+            <button type="button" class="pum-close popmake-close" aria-label="Close">
+                X </button>
+        </div>
+    </div>
+    <div id="pum-386" class="pum pum-overlay pum-theme-224 pum-theme-default-theme popmake-overlay click_open"
+        data-popmake="{&quot;id&quot;:386,&quot;slug&quot;:&quot;foto-5&quot;,&quot;theme_id&quot;:224,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;&quot;,&quot;responsive_max_width&quot;:&quot;&quot;,&quot;custom_width&quot;:&quot;640&quot;,&quot;custom_height&quot;:&quot;380&quot;,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;location&quot;:&quot;center top&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width_unit&quot;:&quot;px&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;true&quot;,&quot;esc_press&quot;:&quot;true&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;}}}"
+        role="dialog" aria-hidden="true" aria-labelledby="pum_popup_title_386">
+        <div id="popmake-386"
+            class="pum-container popmake theme-224 pum-responsive pum-responsive-medium responsive size-medium">
+            <div id="pum_popup_title_386" class="pum-title popmake-title">
+                Yucely Albarrán - Coordinador de Nómina </div>
+            <div class="pum-content popmake-content">
+                <p>&nbsp;</p>
+                <p><img class="alignleft wp-image-1288" src="{% static 'webBeconsult/img/empleados/empleado5.jpg' %}"
+                        alt="" width="229" height="229" /></p>
+                <p><span style="font-weight: 400;">&#8220;Soy Licenciada en Administración de Recursos Humanos egresada
+                        de la UNSR y cuento con una Especialización en Derecho Laboral de la USM. Tengo 20 años de
+                        experiencia laboral, la cual he adquirido trabajando para Beconsult.</span></p>
+                <p><span style="font-weight: 400;">Aquí comencé como Aprendiz Inces y desde entonces he tenido la
+                        oportunidad de pasar por distintos cargos, lo que me ha permitido conocer varias áreas del
+                        negocio. Mis últimos 9 años han transcurrido en el área de nómina, donde inicié como Auxiliar y
+                        actualmente soy Coordinadora.</span></p>
+                <p><span style="font-weight: 400;">Lo que más me gusta de trabajar en Beconsult es que es una compañía
+                        con trayectoria, estable y para la cual sus colaboradores son lo primero. Trabajar en aquello
+                        que nos gusta es una de las mejores sensaciones que podemos experimentar a lo largo de nuestra
+                        carrera profesional y aquí he logrado sentirme así. </span></p>
+                <p><span style="font-weight: 400;">En esta empresa me proyecto transmitiendo los conocimientos que he
+                        adquirido, asumiendo nuevos retos, con pasión por lo que hago y desarrollando habilidades para
+                        desempeñar con excelencia mi trabajo.&#8221;</span></p>
+                <p>&nbsp;</p>
+            </div>
+            <button type="button" class="pum-close popmake-close" aria-label="Close">
+                X </button>
+        </div>
+    </div>
+    <div id="pum-239" class="pum pum-overlay pum-theme-224 pum-theme-default-theme popmake-overlay click_open"
+        data-popmake="{&quot;id&quot;:239,&quot;slug&quot;:&quot;foto-4&quot;,&quot;theme_id&quot;:224,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;&quot;,&quot;responsive_max_width&quot;:&quot;&quot;,&quot;custom_width&quot;:&quot;640&quot;,&quot;custom_height&quot;:&quot;380&quot;,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;location&quot;:&quot;center top&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width_unit&quot;:&quot;px&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;X&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;true&quot;,&quot;esc_press&quot;:&quot;true&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;}}}"
+        role="dialog" aria-hidden="true" aria-labelledby="pum_popup_title_239">
+        <div id="popmake-239"
+            class="pum-container popmake theme-224 pum-responsive pum-responsive-medium responsive size-medium">
+            <div id="pum_popup_title_239" class="pum-title popmake-title">
+                Daniela Rodríguez - Coordinador de Compensación y Beneficios </div>
+            <div class="pum-content popmake-content">
+                <p>&nbsp;</p>
+                <p><img class="wp-image-1379 alignleft" src="{% static 'webBeconsult/img/empleados/empleado4.jpg' %}"
+                        alt="" width="225" height="225" /></p>
+                <p><span style="font-weight: 400;">&#8220;Soy Industriólogo Ucabista y MSc. en Gerencia de RRHH y RRII,
+                        con más de 7 años de experiencia en el área de administración de personal en diferentes empresas
+                        de servicios y construcción.</span></p>
+                <p><span style="font-weight: 400;">Trabajo en Beconsult desde el 2017 y lo que más me gusta es la
+                        excelente atención al cliente, que se corresponde con sus valores
+                        organizacionales</span><i><span style="font-weight: 400;">.</span></i><span
+                        style="font-weight: 400;"> Desde el proceso de captación hasta las actividades del día a día,
+                        denotan el interés de la compañía por mantener motivado a sus colaboradores y potenciar las
+                        fortalezas de su talento humano.</span></p>
+                <p><span style="font-weight: 400;">En este tiempo he tenido la oportunidad de participar en diferentes
+                        actividades que me han permitido, no solo involucrarme con el proceso productivo de la compañía,
+                        sino con su gente, su historia y sus clientes. Trabajar en Beconsult es la oportunidad laboral
+                        perfecta para desarrollar las habilidades y destrezas profesionales del talento dinámico y
+                        proactivo, que busca aprender y valora el conocimiento.</span></p>
+                <p>En mi tiempo libre disfruto cocinar, en especial la repostería.&#8221;</p>
+                <p>&nbsp;</p>
+            </div>
+            <button type="button" class="pum-close popmake-close" aria-label="Close">
+                X </button>
+        </div>
+    </div>
+    <div id="pum-237" class="pum pum-overlay pum-theme-224 pum-theme-default-theme popmake-overlay click_open"
+        data-popmake="{&quot;id&quot;:237,&quot;slug&quot;:&quot;foto-3&quot;,&quot;theme_id&quot;:224,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;&quot;,&quot;responsive_max_width&quot;:&quot;&quot;,&quot;custom_width&quot;:&quot;640&quot;,&quot;custom_height&quot;:&quot;380&quot;,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;location&quot;:&quot;center top&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width_unit&quot;:&quot;px&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;X&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;true&quot;,&quot;esc_press&quot;:&quot;true&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;}}}"
+        role="dialog" aria-hidden="true" aria-labelledby="pum_popup_title_237">
+        <div id="popmake-237"
+            class="pum-container popmake theme-224 pum-responsive pum-responsive-medium responsive size-medium">
+            <div id="pum_popup_title_237" class="pum-title popmake-title">
+                Jesús de Cámara - Contador </div>
+            <div class="pum-content popmake-content">
+                <p><img class="wp-image-1847 size-medium alignleft"
+                        src="{% static 'webBeconsult/img/empleados/empleado3.png' %}" alt="" width="300" height="300" />
+                </p>
+                <p>“Soy Licenciado en Contaduría Pública de la Universidad Central de Venezuela, mi experiencia laboral
+                    está basada en registros contables, declaración y pago de impuestos, preparación de estados
+                    financieros históricos y ajustados por inflación.</p>
+                <p>Trabajo en Beconsult desde el 2015, inicié como Analista de Contabilidad, generando asientos
+                    contables, emisión de retenciones de IVA e ISLR y emisión de balances mensuales. Para el 2018 fui
+                    ascendido al cargo de Contador.
+                    Beconsult es una empresa con un ambiente laboral agradable que incluye los colaboradores y su
+                    infraestructura, esto permite que el trabajo se desarrolle de la mejor manera posible.</p>
+                <p>Trabajar aquí me ha permitido aprender que los objetivos deben cumplirse con excelencia.</p>
+                <p>En mi tiempo libre me gusta jugar dominó y fútbol.”</p>
+            </div>
+            <button type="button" class="pum-close popmake-close" aria-label="Close">
+                X </button>
+        </div>
+    </div>
+    <div id="pum-235" class="pum pum-overlay pum-theme-224 pum-theme-default-theme popmake-overlay click_open"
+        data-popmake="{&quot;id&quot;:235,&quot;slug&quot;:&quot;foto-2&quot;,&quot;theme_id&quot;:224,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;&quot;,&quot;responsive_max_width&quot;:&quot;&quot;,&quot;custom_width&quot;:&quot;640&quot;,&quot;custom_height&quot;:&quot;380&quot;,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;location&quot;:&quot;center top&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width_unit&quot;:&quot;px&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;X&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;true&quot;,&quot;esc_press&quot;:&quot;true&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;}}}"
+        role="dialog" aria-hidden="true" aria-labelledby="pum_popup_title_235">
+        <div id="popmake-235"
+            class="pum-container popmake theme-224 pum-responsive pum-responsive-medium responsive size-medium">
+            <div id="pum_popup_title_235" class="pum-title popmake-title">
+                Adrianna Garrido - Gerente de Legal </div>
+            <div class="pum-content popmake-content">
+                <p>&nbsp;</p>
+                <p><img class="wp-image-1377 alignleft" src="{% static 'webBeconsult/img/empleados/empleado2.jpg' %}"
+                        alt="" width="225" height="225" /></p>
+                <p><span style="font-weight: 400;">“Soy Abogado egresada de la UCAB y tengo 17 años de experiencia en el
+                        áre</span><span style="font-weight: 400;">a Legal trabajando para empresas del sector retail,
+                        moda y consultoría.</span><span style="font-weight: 400;"> </span></p>
+                <p><span style="font-weight: 400;">Inicié mi trayecto en la compañía en el 2015 como Asesor Legal,
+                        liderando el área de societario y contratos. Actualmente, estoy a cargo de la Gerencia Legal, un
+                        reto en el que he aprendido el valor de la comunicación directa con cada uno de nuestros
+                        clientes y la necesidad de una formación permanente para ofrecerles soluciones y alternativas
+                        que faciliten su operación.</span></p>
+                <p><span style="font-weight: 400;">Ser parte de esta compañía me ha permitido cumplir con dos metas
+                        importantes: mi crecimiento como profesional, manteniendo el equilibrio como mi vida personal y
+                        tener la oportunidad de ser parte del desarrollo de cada una de las personas que integran mi
+                        equipo.  </span></p>
+                <p><span style="font-weight: 400;">Lo que más disfruto hacer en mi tiempo libre es viajar.”</span></p>
+                <p>&nbsp;</p>
+            </div>
+            <button type="button" class="pum-close popmake-close" aria-label="Close">
+                X </button>
+        </div>
+    </div>
+    <div id="pum-230" class="pum pum-overlay pum-theme-224 pum-theme-default-theme popmake-overlay click_open"
+        data-popmake="{&quot;id&quot;:230,&quot;slug&quot;:&quot;foto-1&quot;,&quot;theme_id&quot;:224,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;&quot;,&quot;responsive_max_width&quot;:&quot;&quot;,&quot;custom_width&quot;:&quot;640&quot;,&quot;custom_height&quot;:&quot;380&quot;,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;location&quot;:&quot;center top&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width_unit&quot;:&quot;px&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;X&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;true&quot;,&quot;esc_press&quot;:&quot;true&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;}}}"
+        role="dialog" aria-hidden="true" aria-labelledby="pum_popup_title_230">
+        <div id="popmake-230"
+            class="pum-container popmake theme-224 pum-responsive pum-responsive-medium responsive size-medium">
+            <div id="pum_popup_title_230" class="pum-title popmake-title">
+                Liubar Hurtado- Jefe de Seguridad y Salud Laboral </div>
+            <div class="pum-content popmake-content">
+                <p>&nbsp;</p>
+                <p><img class="wp-image-1763 size-medium alignleft" title="Liubar Hurtado"
+                        src="{% static 'webBeconsult/img/empleados/empleado1.png' %}" alt="" width="300" height="300" />
+                </p>
+                <p>“Soy Ingeniero Industrial de la UNEXPO y Especialista en Higiene Ocupacional de la UCV, mi
+                    experiencia laboral de 15 años ha sido en empresas líderes en sus ramos como lo son el ferretero,
+                    textil, televisivo y consultoría.</p>
+                <p>Laboro en Beconsult desde el 2007 cuando inicié como Especialista en Seguridad y Salud Laboral, luego
+                    como Coordinador de esa área y actualmente como Jefe de SSL y Servicios Generales. Valoro en esta
+                    compañía el apoyo que brindan para desarrollar tu máximo potencial como persona y profesional, eso
+                    me ha permitido participar en importantes proyectos y actividades, que luego hemos podemos
+                    transmitir a nuestros clientes para ayudarlos a cumplir sus objetivos.</p>
+                <p>Cada día de trabajo en Beconsult es una oportunidad de proponer soluciones y resolver problemas que
+                    cada vez te hacen más resiliente, ¡como la empresa!</p>
+                <p>En mi tiempo libre, me gusta jugar baloncesto, trotar, leer y por supuesto compartir en familia.”</p>
+                <p>&nbsp;</p>
+            </div>
+            <button type="button" class="pum-close popmake-close" aria-label="Close">
+                X </button>
+        </div>
+    </div>
+    <script src="{% static 'webBeconsult/js/JS/custom-5.js' %}"></script>
+    <script src="{% static 'webBeconsult/js/JS/custom-6.js' %}"></script>
+    <script type='text/javascript' src="{% static 'webBeconsult/js/js-WordPress/admin/custom.min.js' %}"></script>
+    <!-- <script type='text/javascript' src="{% static 'webBeconsult/js/js-WordPress/jquery/core.min.js' %}"></script> -->
+    <script type='text/javascript' src="{% static 'webBeconsult/js/js-WordPress/jquery/position.min.js' %}"></script>
+    <script src="{% static 'webBeconsult/js/JS/custom-7.js' %}"></script>
+    <script type='text/javascript' src="{% static 'webBeconsult/js/js-WordPress/popup-maker/site.min.js' %}"
+        defer='defer'></script>
+
+    <script type='text/javascript' src="{% static 'webBeconsult/js/js-WordPress/jquery.bxslider/jquery.bxslider.js' %}">
+    </script>
+    <!-- Custom-4 -->
+    <link rel="stylesheet" href="{% static 'webBeconsult/css/custom-4.css' %}">
+    <!-- Custom-4 -->
+</body>
+
+</html>

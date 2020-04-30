@@ -1,0 +1,41 @@
+.banner {
+    background-image: url("{% static 'webBeconsult/img/servicios/bg.png' %}");
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: top center;
+    -webkit-background-size: cover;
+    background-size: cover
+}
+
+.header {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px
+}
+
+html.pum-open.pum-open-overlay,
+html.pum-open.pum-open-overlay.pum-open-fixed .pum-overlay {
+    overflow: hidden;
+    position: fixed;
+    width: 100%
+}
+
+html.pum-open.pum-open-overlay.pum-open-scrollable .pum-overlay.pum-active {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch
+}
+
+@media (min-width:768px) {
+
+    .popmake-content,
+    .popmake-remote-content,
+    .pum-content {
+        overflow: hidden !important
+    }
+}
