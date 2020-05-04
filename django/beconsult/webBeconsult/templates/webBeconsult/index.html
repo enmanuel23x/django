@@ -1414,18 +1414,18 @@
 
                                         <div
                                             class="et_pb_module et_pb_toggle et_pb_toggle_close  et_pb_accordion_item_1 et_pb_accordion_item">
-                                            <h5 class="et_pb_toggle_title">{{ oferta.title }}</h5>
+                                            <h5 class="et_pb_toggle_title">{{ oferta.Titulo }}</h5>
                                             <div class="et_pb_toggle_content clearfix">
                                                 <div id="newhere9" class="clearfix et_pb_popup_builder_17 et_pb_module">
-                                                    {{ oferta.description }}
+                                                    {{ oferta.Descripcion }}
                                                 </div>
                                                 <div> </div>
                                                 <div class="clearfix et_pb_popup_builder_17 et_pb_module">
-                                                    <p><strong>{{ oferta.profile }}</strong></p>
+                                                    <p><strong>Perfil</strong></p>
                                                     <ul>
-                                                        <li>Abogado</li>
-                                                        <li>Cursando o con postgrado en Derecho Tributario.</li>
-                                                        <li>Experiencia mínima: 5 años en materia tributaria.</li>
+                                                        {% for tags in oferta.getTags %}
+                                                            <li>{{ tags }}</li>
+                                                        {% endfor %}
                                                     </ul>
                                                 </div>
                                                 <div><a href="http://www.beconsult.com/beconsult_wp/?page_id=1998/"
@@ -1501,16 +1501,16 @@
                                             <a class="popmake-{{empleado.id}}" href="#">
                                                 <div class="box">
                                                     <!--EN ESTA LINEA CAMBIAR LA FOTO (SOLO LINK)-->
-                                                    <p><img src="static/{{ MEDIA_URL }}{{empleado.image}}"
+                                                    <p><img src="static/{{ MEDIA_URL }}{{empleado.Imagen}}"
                                                             alt="" /></p>
                                                     <div class="overbox">
                                                         <div class="tagline overtext">
                                                             <p class="mendo-links-description"><strong>
                                                                     <!--EN ESTA LINEA CAMBIAR EL NOMBRE DE LA PERSONA DE LA FOTO-->
-                                                                    {{empleado.name}}
+                                                                    {{empleado.Nombre}}
                                                                 </strong><br>
                                                                 <!--EN ESTA LINEA CAMBIAR EL CARGO DE LA PERSONA DE LA FOTO-->
-                                                                {{empleado.title}}
+                                                                {{empleado.Titulo}}
                                                             </p>
                                                         </div>
                                                     </div>
@@ -1687,15 +1687,15 @@
 
                                     {% for Carousel in Carousels %}
                                     <div class="et_pb_slide et_pb_media_alignment_center et_pb_bg_layout_dark"
-                                        style="background-image:url(static/{{ MEDIA_URL }}{{Carousel.image}})">
+                                        style="background-image:url(static/{{ MEDIA_URL }}{{Carousel.Imagenn}})">
                                         <div class="et_pb_container clearfix">
                                             <div class="et_pb_slider_container_inner">
                                                 <div class="et_pb_slide_description">
                                                     <h2 class="et_pb_slide_title"><a
-                                                            href="http://www.beconsult.com/beconsult_wp/?p=1491">{{ Carousel.title }}</a></h2>
-                                                    <div class="et_pb_slide_content ">{{ Carousel.description }}</div>
+                                                            href="http://www.beconsult.com/beconsult_wp/?p=1491">{{ Carousel.Titulo }}</a></h2>
+                                                    <div class="et_pb_slide_content ">{{ Carousel.Descripcion }}</div>
                                                     <div class="et_pb_button_wrapper"><a
-                                                            href="{{Carousel.url}}"
+                                                            href="{{Carousel.URL}}"
                                                             class="et_pb_more_button et_pb_button et_pb_custom_button_icon"
                                                             data-icon="&#x45;">LEER MÁS</a></div>
                                                 </div> <!-- .et_pb_slide_description -->
@@ -2018,13 +2018,13 @@
         <div id="popmake-1"
             class="pum-container popmake theme-224 pum-responsive pum-responsive-medium responsive size-medium">
             <div id="pum_popup_title_{{empleado.id}}" class="pum-title popmake-title">
-                {{empleado.name}} - {{empleado.title}} </div>
+                {{empleado.Nombre}} - {{empleado.Titulo}} </div>
             <div class="pum-content popmake-content">
                 <p>&nbsp;</p>
                 <p><img class="wp-image-1763 size-medium alignleft" title="Liubar Hurtado"
-                        src="static/{{ MEDIA_URL }}{{empleado.image}}" alt="" width="300" height="300" />
+                        src="static/{{ MEDIA_URL }}{{empleado.Imagen}}" alt="" width="300" height="300" />
                 </p>
-                <p>{{empleado.description}}</p>
+                <p>{{empleado.Descripcion}}</p>
             </div>
             <button type="button" class="pum-close popmake-close" aria-label="Close">
                 X </button>

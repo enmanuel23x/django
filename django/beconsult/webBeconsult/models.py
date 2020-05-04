@@ -4,10 +4,10 @@ from django.db import models
 class Carousel(models.Model):
     """TODO Model definition for Carousel."""
 
-    title = models.CharField(max_length=100)
-    image = models.ImageField(upload_to="webBeconsult/img/uploads", null=True) #TODO
-    url = models.URLField(blank=True, null=True)
-    description = models.CharField(max_length=500)
+    Titulo = models.CharField(max_length=100)
+    Imagen = models.ImageField(upload_to="webBeconsult/img/uploads", null=True) #TODO
+    URL = models.URLField(blank=True, null=True)
+    Descripcion = models.CharField(max_length=500)
     
     # Creado y actualizado
     created = models.DateTimeField(auto_now_add=True)
@@ -21,15 +21,14 @@ class Carousel(models.Model):
 
     def __str__(self):
         """Unicode representation of Carousel."""
-        return self.title
+        return self.Titulo
 
 class JobOffer(models.Model):
     """TODO Model definition for JobOffer."""
     id = models.AutoField(primary_key=True)
-    title = models.CharField(max_length=45)
-    description = models.TextField()
-    profile = models.TextField()
-
+    Titulo = models.CharField(max_length=45)
+    Descripcion = models.TextField()
+    Tags_en_Perfil = models.TextField(max_length=250, null=True)
     # Creado y actualizado
     created = models.DateTimeField(auto_now_add=True)
     update = models.DateTimeField(auto_now=True)
@@ -42,14 +41,17 @@ class JobOffer(models.Model):
 
     def __str__(self):
         """Unicode representation of JobOffer."""
-        return self.title
+        return self.Titulo
+    def getTags(self):
+        return str(self.Tags_en_Perfil).split("&")
+            
 
 class Employees(models.Model):
     """TODO Model definition for JobOffer."""
-    name = models.CharField(max_length=45)
-    title = models.CharField(max_length=45)
-    image = models.ImageField(upload_to="webBeconsult/img/uploads/empleados", null=True) #TODO
-    description = models.TextField()
+    Nombre = models.CharField(max_length=45)
+    Titulo = models.CharField(max_length=45)
+    Imagen = models.ImageField(upload_to="webBeconsult/img/uploads/empleados", null=True) #TODO
+    Descripcion = models.TextField()
 
     # Creado y actualizado
     created = models.DateTimeField(auto_now_add=True)
@@ -63,4 +65,4 @@ class Employees(models.Model):
 
     def __str__(self):
         """Unicode representation of Employess."""
-        return self.name
+        return self.Nombre
