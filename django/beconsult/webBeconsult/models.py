@@ -43,7 +43,7 @@ class JobOffer(models.Model):
         """Unicode representation of JobOffer."""
         return self.Titulo
     def getTags(self):
-        return str(self.Tags_en_Perfil).split("&")
+        return str(self.Tags_en_Perfil).split("\n")
             
 
 class Employees(models.Model):

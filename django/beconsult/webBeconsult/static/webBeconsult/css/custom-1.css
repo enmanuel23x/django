@@ -1,5 +1,5 @@
 .banner {
-    background-image: url("{% static 'webBeconsult/img/servicios/bg.png' %}");
+    background-image: url('/static/webBeconsult/img/bg.jpg');
     display: block;
     width: 100%;
     height: 100%;
