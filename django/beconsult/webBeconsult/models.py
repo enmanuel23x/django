@@ -10,8 +10,8 @@ class Carousel(models.Model):
     Descripcion = models.CharField(max_length=500)
     
     # Creado y actualizado
-    created = models.DateTimeField(auto_now_add=True)
-    update = models.DateTimeField(auto_now=True)
+    Creado = models.DateTimeField(auto_now_add=True)
+    Actualizado = models.DateTimeField(auto_now=True)
 
     class Meta:
         """Meta definition for Carousel."""
@@ -26,12 +26,12 @@ class Carousel(models.Model):
 class JobOffer(models.Model):
     """TODO Model definition for JobOffer."""
     id = models.AutoField(primary_key=True)
-    Titulo = models.CharField(max_length=45)
+    Titulo = models.CharField(max_length=120)
     Descripcion = models.TextField()
     Tags_en_Perfil = models.TextField(max_length=250, null=True)
     # Creado y actualizado
-    created = models.DateTimeField(auto_now_add=True)
-    update = models.DateTimeField(auto_now=True)
+    Creado = models.DateTimeField(auto_now_add=True)
+    Actualizado = models.DateTimeField(auto_now=True)
 
     class Meta:
         """Meta definition for JobOffer."""
@@ -48,14 +48,14 @@ class JobOffer(models.Model):
 
 class Employees(models.Model):
     """TODO Model definition for JobOffer."""
-    Nombre = models.CharField(max_length=45)
-    Titulo = models.CharField(max_length=45)
+    Nombre = models.CharField(max_length=120)
+    Titulo = models.CharField(max_length=120)
     Imagen = models.ImageField(upload_to="webBeconsult/img/uploads/empleados", null=True) #TODO
     Descripcion = models.TextField()
 
     # Creado y actualizado
-    created = models.DateTimeField(auto_now_add=True)
-    update = models.DateTimeField(auto_now=True)
+    Creado = models.DateTimeField(auto_now_add=True)
+    Actualizado = models.DateTimeField(auto_now=True)
 
     class Meta:
         """Meta definition for Employees."""
