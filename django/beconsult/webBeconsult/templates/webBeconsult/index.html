@@ -7,6 +7,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Beconsult</title>
+    <link rel="stylesheet" href="{% static 'webBeconsult/css/font-awesome.min.css' %}">
     <!-- Custom-1 CSS-->
     <link rel="stylesheet" href="{% static 'webBeconsult/css/custom-1.css' %}">
     <!-- Custom-1 CSS-->
@@ -110,10 +111,15 @@
             </div>
         </header> <!-- #main-header -->
         <div id="et-main-area">
+            <nav class="float-action-button">
+                <a href="https://api.whatsapp.com/send?phone=5804242400318&text=%C2%A1Hola!%0AEn%20Beconsult%20tenemos%20un%20lugar%20para%20ti.%0AGracias%20por%20tu%20inter%C3%A9s%20en%20insertarte%20en%20esta%20comunidad%20de%20profesionales.%20Buscamos%20un%20acercamiento%20inmediato%20entre%20nuestras%20oportunidades%20de%20empleo%20y%20talentos%20como%20t%C3%BA." class="buttons main-button" title="Whatsapp" data-toggle="tooltip" data-placement="left">
+                        <i class="fab fa-whatsapp"></i>
+                      </a>
+              </nav>
             <div id="main-content">
                 <article id="post-40" class="post-40 page type-page status-publish hentry">
                     <div class="entry-content">
-                        <div id="index"
+                        <div style="display: none;" id="index"
                             class="et_pb_section et_pb_fullwidth_section  et_pb_section_0 et_section_regular">
                             <div
                                 class="et_pb_module et_pb_slider et_pb_slider_no_shadow et_pb_slider_show_image  et_pb_fullwidth_slider_0">
@@ -145,6 +151,34 @@
                                 <div class="et_pb_fullwidth_header_overlay"></div>
                                 <div class="et_pb_fullwidth_header_scroll"></div>
                             </section>
+                        </div> <!-- .et_pb_section -->
+                        <div id="noticias"
+                            class="et_pb_section et_pb_fullwidth_section  et_pb_section_7 et_section_regular">
+                            <div id="dm-slider"
+                                class="et_pb_module et_pb_slider et_pb_post_slider et_pb_slider_no_pagination et_pb_slider_no_shadow et_pb_post_slider_image_background  et_pb_fullwidth_post_slider_0">
+                                <div class="et_pb_slides">
+
+                                    {% for Carousel in Carousels %}
+                                    <div class="et_pb_slide et_pb_media_alignment_center et_pb_bg_layout_dark"
+                                        style="background-image:url(/static/{{MEDIA_URL}}{{Carousel.Imagen}})">
+                                        <div class="et_pb_container clearfix">
+                                            <div class="et_pb_slider_container_inner">
+                                                <div class="et_pb_slide_description">
+                                                    <h2 class="et_pb_slide_title"><a
+                                                            href="http://www.beconsult.com/beconsult_wp/?p=1491">{{ Carousel.Titulo }}</a></h2>
+                                                    <div class="et_pb_slide_content ">{{ Carousel.Descripcion }}</div>
+                                                    <div class="et_pb_button_wrapper"><a
+                                                            href="{{Carousel.URL}}"
+                                                            class="et_pb_more_button et_pb_button et_pb_custom_button_icon"
+                                                            data-icon="&#x45;">LEER MÁS</a></div>
+                                                </div> <!-- .et_pb_slide_description -->
+                                            </div>
+                                        </div> <!-- .et_pb_container -->
+                                    </div> <!-- .et_pb_slide -->
+                                  {% endfor %}
+                                    
+                                </div> <!-- .et_pb_slides -->
+                            </div> <!-- .et_pb_slider -->
                         </div> <!-- .et_pb_section -->
                         <div class="et_pb_section  et_pb_section_1 et_pb_with_background et_section_regular">
                             <div class=" et_pb_row et_pb_row_0 et_pb_row_fullwidth">
@@ -1374,9 +1408,7 @@
 -->
                                             </p>
                                             <h1 style="text-align: center;"><strong><span
-                                                        style="color: #085795;">TENEMOS UN LUGAR PARA TI&nbsp;&nbsp;<a
-                                                            href="{% static 'webBeconsult/img/whatsapp-logo-variant-2.png' %}"
-                                                            alt="" width="31" height="31"></a>
+                                                        style="color: #085795;">TENEMOS UN LUGAR PARA TI&nbsp;&nbsp;
                                                     </span></strong></h1>
                                         </div>
                                     </div> <!-- .et_pb_text -->
@@ -1501,7 +1533,7 @@
                                             <a class="popmake-{{empleado.id}}" href="#">
                                                 <div class="box">
                                                     <!--EN ESTA LINEA CAMBIAR LA FOTO (SOLO LINK)-->
-                                                    <p><img src="static/{{ MEDIA_URL }}{{empleado.Imagen}}"
+                                                    <p><img src="/static/{{ MEDIA_URL }}{{empleado.Imagen}}"
                                                             alt="" /></p>
                                                     <div class="overbox">
                                                         <div class="tagline overtext">
@@ -1687,7 +1719,7 @@
 
                                     {% for Carousel in Carousels %}
                                     <div class="et_pb_slide et_pb_media_alignment_center et_pb_bg_layout_dark"
-                                        style="background-image:url(static/{{ MEDIA_URL }}{{Carousel.Imagenn}})">
+                                        style="background-image:url(/static/{{MEDIA_URL}}{{Carousel.Imagen}})">
                                         <div class="et_pb_container clearfix">
                                             <div class="et_pb_slider_container_inner">
                                                 <div class="et_pb_slide_description">
@@ -2022,7 +2054,7 @@
             <div class="pum-content popmake-content">
                 <p>&nbsp;</p>
                 <p><img class="wp-image-1763 size-medium alignleft" title="Liubar Hurtado"
-                        src="static/{{ MEDIA_URL }}{{empleado.Imagen}}" alt="" width="300" height="300" />
+                        src="/static/{{ MEDIA_URL }}{{empleado.Imagen}}" alt="" width="300" height="300" />
                 </p>
                 <p>{{empleado.Descripcion}}</p>
             </div>

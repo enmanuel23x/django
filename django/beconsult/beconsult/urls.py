@@ -23,7 +23,6 @@ from webBeconsult import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^terminos/', views.terminos),
     url(r'^$', views.index),
 ]
 if True:
