@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+'suitlocale',
     'suit',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,6 +40,22 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'webBeconsult',
 ]
+
+# Django Suit configuration example
+SUIT_CONFIG = {
+    # header
+    'ADMIN_NAME': 'Beconsult - Panel de Administración',
+    'HEADER_DATE_FORMAT': 'l, j. F Y',
+    'HEADER_TIME_FORMAT': 'H:i',
+
+    # forms
+    'SHOW_REQUIRED_ASTERISK': True,
+    'CONFIRM_UNSAVED_CHANGES': True,
+
+    # misc
+    'LIST_PER_PAGE': 15
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
