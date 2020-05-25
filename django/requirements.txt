@@ -97,7 +97,7 @@ pycparser==2.18
 
 pycrypto==2.6.1
 
-pyOpenSSL==17.3.0
+pyOpenSSL==17.5.0
 
 python-crontab==2.1.1
 
