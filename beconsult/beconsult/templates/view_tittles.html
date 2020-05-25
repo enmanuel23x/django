@@ -1,0 +1,109 @@
+{% extends "backofficebase.html" %}
+{% load static %}
+
+<!-- Reference to related css file -->
+{% block custom_css %}
+{% endblock %}
+
+{% block content %}
+    <div class="container" style="padding-left: 0">
+        <div class="section">
+            <div class="row">
+                <div class="col-lg-12" style="text-align: center; padding-left: 10px">
+                    <h3 style="text-align: center">Cargos Existentes</h3>
+                    <table id="table" class="datatable-cm table-cm dt-responsive nowrap" width="100%" cellspacing="0" style="max-width: 97%;border: solid 1px grey;" >
+                        <thead class="table-heading-agruppa">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Código</th>
+                            <th>Descripción</th>
+                            <th>Departamento</th>
+                            <th>Status</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
+                        </tr>
+
+                        </thead>
+
+                        <!-- Section to show admins' attributes  -->
+                        <tbody class="table-body-agruppa">
+                        {% for t in titles %}
+                            <tr>
+                                <td style="padding-left: 2%; padding-right: 2%">
+                                    {{t.name}}
+                                </td>
+                                <td style="padding-left: 2%; padding-right: 2%">
+                                    {{t.id}}
+                                </td>
+                                <td style="padding-left: 2%; padding-right: 2%">
+                                    {{t.description}}
+                                </td>
+                                <td style="padding-left: 2%; padding-right: 2%">
+                                    {{t.dep}}
+                                </td>
+                                <td style="padding-left: 2%; padding-right: 2%">
+                                    {{t.status}}
+                                </td>
+                                <td style="padding-left: 2%; padding-right: 2%">
+                                    <a  href="{% url 'editTittle' t.id %}">Editar</a>
+                                </td>
+                                <td style="padding-left: 2%; padding-right: 2%">
+                                    <a class="link_eliminar" href="{% url 'deleteTittle' t.id %}">Eliminar</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+<!-- jQuery Functions needed -->
+{% block custom_script %}
+    <!-- DataTable attributes and validators -->
+    <script>
+        $('#table').DataTable({
+            "language": {
+                "sProcessing":    "Procesando...",
+                "sLengthMenu":    "Mostrar _MENU_ registros",
+                "sZeroRecords":   "No se encontraron resultados",
+                "sEmptyTable":    "Ningún dato disponible en esta tabla",
+                "sInfo":          "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "sInfoEmpty":     "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "sInfoFiltered":  "(filtrado de un total de _MAX_ registros)",
+                "sInfoPostFix":   "",
+                "sSearch":        "Buscar: ",
+                "sUrl":           "",
+                "sInfoThousands":  ",",
+                "sLoadingRecords": "Cargando...",
+                "oPaginate": {
+                    "sFirst":    "Primero",
+                    "sLast":    "Último",
+                    "sNext":    "Siguiente",
+                    "sPrevious": "Anterior"
+                },
+                "oAria": {
+                    "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                    "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                }
+            },
+            "bPaginate": false,
+
+        });
+    </script>
+    <script>
+        $( document ).ready(function() {
+            $( ".link_eliminar" ).click(function(event) {
+                var link =this.href;
+                event.preventDefault();
+                if (confirm('Estás seguro que deseas eliminar este objeto')) {
+                    window.location.href = link;
+                }
+            });
+        });
+
+    </script>
+{% endblock %}

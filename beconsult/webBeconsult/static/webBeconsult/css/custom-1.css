@@ -1,0 +1,68 @@
+.banner {
+    background-image: url('/static/webBeconsult/img/bg.jpg');
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: top center;
+    -webkit-background-size: cover;
+    background-size: cover
+}
+
+.header {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px
+}
+
+html.pum-open.pum-open-overlay,
+html.pum-open.pum-open-overlay.pum-open-fixed .pum-overlay {
+    overflow: hidden;
+    position: fixed;
+    width: 100%
+}
+
+html.pum-open.pum-open-overlay.pum-open-scrollable .pum-overlay.pum-active {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch
+}
+
+@media (min-width:768px) {
+
+    .popmake-content,
+    .popmake-remote-content,
+    .pum-content {
+        overflow: hidden !important
+    }
+}
+nav.float-action-button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1em;
+    z-index: 25;
+  }
+  
+  a.buttons {
+    box-shadow: 0 5px 11px -2px rgba(0, 0, 0, 0.18), 0 4px 12px -7px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: #25d366;
+    font-size: 2.6em;
+    padding: 23% 0 0 0;
+    text-align: center;
+    display: block;
+    position: relative;
+    -webkit-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+  }
+  .fab{
+    font-size: 50px;
+  }
+  

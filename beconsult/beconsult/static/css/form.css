@@ -1,0 +1,166 @@
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
+.control-group{
+    margin-top: 5px;
+}
+
+input{
+    border: none;
+    border-bottom: solid 1px #a7a2a2;
+}
+
+@font-face {
+    font-family: avenir-black;
+    src: url('../fonts/AvenirBlack.woff');
+}
+
+@font-face {
+    font-family: avenir-light;
+    src: url('../fonts/AVENIRLTSTD-LIGHT.woff');
+}
+
+
+@font-face {
+    font-family: avenir-medium;
+    src: url('../fonts/AVENIRLTSTD-MEDIUM.woff');
+}
+
+.tittleh3{
+    font-family: avenir-black;
+    font-weight: bold;
+    color: #172a48;
+    font-size: 18px;
+
+}
+
+.tittlecargo{
+    color: #085795;
+    text-transform: uppercase;
+    font-family: avenir-black;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 10px !important;
+}
+
+.campsobligatorios{
+    color: red;
+    font-family: avenir-medium;
+    font-size: 14px;
+}
+
+.tittleh4{
+    font-family: avenir-black;
+    color:#4c4c4c;
+    margin-left: -56px;
+    padding-left: 55px;
+    font-weight: bold;
+}
+
+.questions{
+    padding: 5px 5px 5px 0px;
+    display: block;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: avenir-black;
+}
+
+#submit_button{
+    background: none;
+    color: #4c4c4c;
+    border-color: #4c4c4c;
+    border-radius: 8px;
+    text-transform: uppercase;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-style: italic;
+}
+
+.fields{
+    padding: 5px 5px 5px 0px;
+    display: block;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: avenir-black;
+}
+
+#tittleimage{
+    max-width: 100%;
+}
+
+#questionscol{
+    border-left: solid 1px #4c4c4c;
+    padding-left: 56px !important;
+}
+
+.linksimages{
+    max-width: 15%;
+}
+
+.separator{
+    margin-left: -55px;
+    border-color: #4c4c4c;
+    width: 150px;
+    margin-top: -2px;
+}
+
+.red{
+    color: red;
+}
+
+#desccol{
+    padding-right: 0 !important;
+    width: 45% !important;
+}
+
+
+#tittledescription{
+    padding-right: 90px;
+    color: #4c4c4c;
+    font-family: avenir-light;
+}
+
+#terms{
+    color: #4c4c4c !important;
+    font-family: avenir-light;
+    font-style: italic;
+}
+
+#termsycond{
+    color: #4c4c4c !important;
+    font-family: avenir-light;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+#colcenter{
+    background: #fdfcfc;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    #desccol {
+        text-align: center;
+        padding: 0 2% !important;
+        margin-bottom: 10px;
+        width: 100% !important;
+    }
+
+    #tittledescription {
+        padding: 0;
+    }
+
+    #tittleimage {
+        max-width: 100%;
+    }
+
+}

@@ -1,0 +1,26 @@
+{% extends "backofficebase.html" %}
+{% load static %}
+
+<!-- Reference to related css file -->
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'css/editquestion.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="section">
+            <div class="row">
+                <div class="col-lg-12" style="text-align: center">
+                    <br><br><br><br>
+                    <img alt="Brand" src="{% static "images/logo_2000.png" %}"style="max-width: 35%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+<!-- jQuery Functions needed -->
+{% block custom_script %}
+
+{% endblock %}

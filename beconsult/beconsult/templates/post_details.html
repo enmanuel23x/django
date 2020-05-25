@@ -1,0 +1,93 @@
+{% extends "backofficebase.html" %}
+{% load static %}
+
+<!-- Reference to related css file -->
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'css/postdetail.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+    <div class="container" style="text-align: center">
+        <div class="section">
+            <div class="row">
+                <br>
+                <h3 id="titulo">Detalles de la postulación de {{ post.name }} {{ post.lastName }} para el cargo de: {{ post.tittle.name }} </h3>
+                <br>
+                <div class="col-lg-6" style="text-align: left">
+                    <h4 class="titulodetalle">Código de la postulación: </h4> {{ post.id }} <br><br>
+                    <h4 class="titulodetalle">Cargo: </h4>{{ post.tittle.name }} <br><br>
+                    <h4 class="titulodetalle">Nombre: </h4>{{ post.name }} <br><br>
+                    <h4 class="titulodetalle">Apellido: </h4>{{ post.lastName }} <br><br>
+                    <h4 class="titulodetalle">Correo: </h4>{{ post.email }} <br><br>
+                    <h4 class="titulodetalle">Cédula: </h4>{{ post.documentId }} <br><br>
+                    {% if post.birthDate%}
+                        <h4 class="titulodetalle">Fecha de nacimiento: </h4> {{ post.birthDate }} <br><br>
+                    {% endif %}
+                    <h4 class="titulodetalle">Ciudad: </h4>{{ post.city }} <br><br>
+                    <h4 class="titulodetalle">Formación: </h4>{{ post.studies }} <br><br>
+                    <h4 class="titulodetalle">CV: </h4><a href="../../media/{{ post.cv }}" download>Descargar CV</a>  <br><br>
+                </div>
+                <div class="col-lg-6" style="text-align: left">
+                    <h4 class="titulodetalle">Status: </h4>{{ post.status }} <br><br>
+                    <h4 class="titulodetalle">Aspiración Salarial: </h4>{{ post.aspSalarial }} Bs.<br><br>
+                    <h4 class="titulodetalle">Salario Actual: </h4>{{ post.salActual }} Bs.<br><br>
+                    <h4 class="titulodetalle">Fecha de la postulación: </h4>{{ post.postulacionDate }} <br><br>
+                    <h4 class="titulodetalle">Elegido: </h4>{% if post.approved == True %}SI{% else  %}NO{% endif %} <br><br>
+                    <h4 class="titulodetalle">Ingresó: </h4>{% if post.accepted == True %}SI{% else  %}NO{% endif %} <br><br>
+                    <h4 class="titulodetalle">Razón de no aceptación: </h4>{{ post.whyNotAccepted }} <br><br>
+                    {% for q in questions %}
+                        <h4 class="titulodetalle">{{ q.question }}: </h4>{{ q.answer }} <br><br>
+                    {% endfor %}
+                </div>
+            </div>
+            <br>
+            <button class="btn btn-primary" onclick="window.location.href='{% url 'approvedPosts' post.id %}'">Elegible</button>
+            <button class="btn btn-danger" onclick="window.location.href='{% url 'notApprovedPosts' post.id %}'">No Elegible</button>
+            <button class="btn btn-primary" onclick="window.location.href='{% url 'acceptedPosts' post.id %}'">Ingresó</button>
+            <button class="btn btn-danger" onclick="window.location.href='{% url 'notAcceptedPosts' post.id %}'">No Ingresó</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" >Editar razón de no aceptación</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Escribir razón de no aceptación</h4>
+                </div>
+                <form  class="form-horizontal form-validate form-inline" action="{% url 'addReason' post.id %}" method="post" accept-charset="utf-8" class="form-group">
+                    <div class="modal-body">
+                        <select id="reason" name="reason" required>
+                            <option value="Mejor Oferta Salarial">Mejor Oferta Salarial</option>
+                            <option value="Bono/Salario $">Bono/Salario $</option>
+                            <option value="Desistió del proceso por la zona">Desistió del proceso por la zona</option>
+                            <option value="No asistió a entrevista">No asistió a entrevista</option>
+                            <option value="No interesado en la entrevista">No interesado en la entrevista</option>
+                            <option value="Desistió del proceso">Desistió del proceso</option>
+                            <option value="No disponible por Horario">No disponible por Horario</option>
+                            <option value="Interesado en trabajar como freelance">Interesado en trabajar como freelance</option>
+                            <option value="Otras">Otras</option>
+                        </select>
+                        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-success" type="submit" value="Registrar" >Agregar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
+
+<!-- jQuery Functions needed -->
+{% block custom_script %}
+
+{% endblock %}

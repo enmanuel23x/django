@@ -1,0 +1,72 @@
+.table-heading-agruppa{
+    font-family: Gotham;
+    border-bottom: 1px solid #5A5A5A;
+    color: #5A5A5A;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+
+.table-heading-agruppa th{
+    min-width: 100px;
+    text-align: center;
+    height: 35px;
+    background-color: #F3F3F3;
+}
+
+.table-body-agruppa td{
+    height: 35px;
+    text-align: center;
+}
+.table-agruppa td{
+    height: 35px;
+    text-align: justify;
+}
+.details-table{
+    padding: 6px;
+    text-align: justify;
+    padding-right:5px;
+    min-width: 200px;
+}
+
+.details-heading {
+    padding-top: 15px;
+
+}
+
+.details-content{
+    text-align: justify;
+    padding-left: 15px;
+    background-color: #F3F3F3;
+    border: solid 1px #FFF;
+}
+
+
+.dataTables_filter input{
+    background-color: #F3F3F3;
+    border: none;
+    box-shadow: none;
+    height: 25px;
+    margin-bottom: 2px;
+
+}
+
+.dataTables_filter label{
+    background-color: transparent;
+    border: none;
+    font-family: Gotham Book;
+    text-transform: uppercase;
+    text-align: left;
+    color: #5A5A5A;
+    font-size: 13px;
+    height: 25px;
+
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+

@@ -1,0 +1,8 @@
+.fields{
+    width: 200px !important;
+    font-weight: bold;
+}
+
+input{
+    line-height: 25px;
+}

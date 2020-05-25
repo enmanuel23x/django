@@ -1,0 +1,117 @@
+<!-- Left side column. contains the sidebar -->
+<div class="main-sidebar" style="height: 100vh;">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!--Sidebar Options -->
+        <ul class="sidebar-menu" style="padding-left: 0px;margin-bottom: 0px">
+            <div class="list-group " id="accordion">
+                <!-- #################### CARGOS ##################### -->
+                <div class="dropdown-sidebar">
+                    <a class="link sidebar_option skin-blue  bo-item-nav " data-toggle="collapse" data-parent="#accordion" href="#demo1">
+                        <span class="fa fa-drivers-license"></span> Cargos
+                        <i class="sidebar-icon fa fa-caret-right" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse" id="demo1">
+                        <a href="{% url 'viewTittles' %}" class="sidebar_option collapse-menu">Ver Cargos</a>
+                        <a href="{% url 'addTittle' %}" class="sidebar_option collapse-menu">Crear Cargos</a>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        <ul class="sidebar-menu" style="padding-left: 0px;margin-bottom: 0px;margin-top: -25px;">
+            <div class="list-group " id="accordion">
+                <!-- #################### OFERTAS DE CARGOS ##################### -->
+                <div class="dropdown-sidebar">
+                    <a class="link sidebar_option skin-blue  bo-item-nav " data-toggle="collapse" data-parent="#accordion" href="#demo6">
+                        <span class="fa fa-circle"></span> Ofertas
+                        <i class="sidebar-icon fa fa-caret-right" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse" id="demo6">
+                        <a href="{% url 'viewOffers' %}" class="sidebar_option collapse-menu">Ver Ofertas</a>
+                        <a href="{% url 'addOffer' %}" class="sidebar_option collapse-menu">Crear Ofertas</a>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        <ul class="sidebar-menu" style="padding-left: 0px; margin-bottom: 0px;margin-top: -25px;">
+            <div class="list-group " id="accordion">
+                <!-- #################### POSTULACIONES ##################### -->
+                <div class="dropdown-sidebar">
+                    <a class="link sidebar_option skin-blue  bo-item-nav " data-toggle="collapse" data-parent="#accordion" href="#demo2">
+                        <span class="fa fa-envelope"></span>  Postulaciones
+                        <i class="sidebar-icon fa fa-caret-right" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse" id="demo2">
+                        <a href="{% url 'viewPosts' %}" class="sidebar_option collapse-menu">Ver Postulaciones</a>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        <ul class="sidebar-menu" style="padding-left: 0px; margin-bottom: 0px;margin-top: -25px;">
+            <div class="list-group " id="accordion">
+                <!-- #################### QUESTIONS ##################### -->
+                <div class="dropdown-sidebar">
+                    <a class="link sidebar_option skin-blue  bo-item-nav " data-toggle="collapse" data-parent="#accordion" href="#demo3">
+                        <span class="fa fa-question-circle"></span>  Preguntas
+                        <i class="sidebar-icon fa fa-caret-right" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse" id="demo3">
+                        <a href="{% url 'viewQuestions' %}" class="sidebar_option collapse-menu">Ver/Editar Preguntas</a>
+                        <a href="{% url 'addQuestion' %}" class="sidebar_option collapse-menu">Crear Preguntas</a>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        <ul class="sidebar-menu" style="padding-left: 0px; margin-bottom: 0px;margin-top: -25px;">
+            <div class="list-group " id="accordion">
+                <!-- #################### ESTADISTICAS ##################### -->
+                <div class="dropdown-sidebar">
+                    <a class="link sidebar_option skin-blue  bo-item-nav " data-toggle="collapse" data-parent="#accordion" href="#demo4">
+                        <span class="fa fa-bar-chart"></span>  Estadísticas
+                        <i class="sidebar-icon fa fa-caret-right" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse" id="demo4">
+                        <a href="{% url 'insc' %}" class="sidebar_option collapse-menu">Estadísticas sobre inscripciones</a>
+                        <a href="{% url 'cand' %}" class="sidebar_option collapse-menu">Estadísticas sobre candidatos  </a>
+                        <!--a href="{# url 'age' #}" class="sidebar_option collapse-menu">Estadísticas sobre edades  </a-->
+                        <a href="{% url 'sal' %}" class="sidebar_option collapse-menu">Estadísticas sobre salarios  </a>
+                        <a href="{% url 'csv' %}" class="sidebar_option collapse-menu">Exportar estadísticas en CSV  </a>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        {% if request.user.is_superuser == True %}
+            <ul class="sidebar-menu" style="padding-left: 0px; margin-bottom: 0px;margin-top: -25px;">
+                <div class="list-group " id="accordion">
+                    <!-- #################### USERS ##################### -->
+                    <div class="dropdown-sidebar">
+                        <a class="link sidebar_option skin-blue  bo-item-nav " data-toggle="collapse" data-parent="#accordion" href="#demo5">
+                            <span class="fa fa-users"></span>  Usuarios
+                            <i class="sidebar-icon fa fa-caret-right" aria-hidden="true"></i>
+                        </a>
+                        <div class="collapse" id="demo5">
+                            <a href="{% url 'signup' %}" class="sidebar_option collapse-menu">Registrar nuevo usuario</a>
+                            <a href="{% url 'viewUsers' %}" class="sidebar_option collapse-menu">Ver usuarios registrados</a>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <ul class="sidebar-menu" style="padding-left: 0px; margin-bottom: 0px;margin-top: -25px;">
+                <div class="list-group " id="accordion">
+                    <!-- #################### EMAIL SETTINGS ##################### -->
+                    <div class="dropdown-sidebar">
+                        <a class="link sidebar_option skin-blue  bo-item-nav " data-toggle="collapse" data-parent="#accordion" href="#demo7">
+                            <span class="fa fa-gears"></span> Administración
+                            <i class="sidebar-icon fa fa-caret-right" aria-hidden="true"></i>
+                        </a>
+                        <div class="collapse" id="demo7">
+                            <a href="{% url 'mailSettings' %}" class="sidebar_option collapse-menu">Administración de correos</a>
+                            <a href="{% url 'messageSettings' %}" class="sidebar_option collapse-menu">Administración de mensajes</a>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        {% endif %}
+    </section>
+    <!-- /.sidebar -->
+</div>

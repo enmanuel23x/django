@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- Reference to related css file -->
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="section">
+            <div class="row" style="padding-top: 5%">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-8" id="colcenter" >
+                    <img alt="Brand" src="{% static "images/logo_2000.png" %}"style="max-width: 28%;"><br><br><br><br>
+                    <form enctype="multipart/form-data" class="form-horizontal form-validate form-inline" action="" method="post" accept-charset="utf-8" class="form-group" role="form" id="formularioform">
+                        {% for field in form %}
+                            <div class="control-group" id="{{field.name}}-state">
+                                <div class="input-group">
+                                    <span class="input-group-addon fields" id="basic-addon1"><b>{{ field.label }} <span class="red"></span></b></span>{{ field }}
+                                </div>
+                                <!-- Not valid fields and errors validation -->
+                                <span class="error" id="{{ field.name }}-icon"></span>
+                                <span class='error' id='{{field.name}}-error' aria-live="polite"></span>
+                                {{ field.errors }}
+                            </div><br>
+                        {% endfor %}
+                        {% if form.errors %}<h5 style="color: red">Por favor, introduzca un nombre de usuario y clave correctos. Observe que ambos campos pueden ser sensibles a mayúsculas.</h5>{% endif %}<br>
+                        <a href="{% url 'reset_password'  %}">Olvidé mi contraseña</a><br><br>
+                        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                        <!-- Sign up button to send the input values -->
+                        <button class="btn btn-primary" type="submit" value="Registrar" id="submit_button" >Entrar</button>
+                    </form>
+                    <br><br>
+                </div>
+                <div class="col-lg-2">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<!-- jQuery Functions needed -->
+{% block custom_script %}
+
+{% endblock %}

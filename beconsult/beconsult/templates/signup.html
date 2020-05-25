@@ -1,0 +1,41 @@
+{% extends "backofficebase.html" %}
+{% load static %}
+
+<!-- Reference to related css file -->
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="section">
+            <div class="row">
+                <div class="col-lg-12" style="text-align:center;">
+                    <h3 style="font-weight: bold">Registrar nuevo usuario en el sistema</h3> <br>
+                    <form enctype="multipart/form-data" class="form-horizontal form-validate form-inline" action="" method="post" accept-charset="utf-8" class="form-group" role="form" id="formularioform">
+                        {% for field in form %}
+                            <div class="control-group" id="{{field.name}}-state">
+                                <div class="input-group">
+                                    <span class="input-group-addon fields" id="basic-addon1"><b>{{ field.label }} <span class="red"></span></b></span>{{ field }}
+                                </div>
+                                <!-- Not valid fields and errors validation -->
+                                <span class="error" id="{{ field.name }}-icon"></span>
+                                <span class='error' id='{{field.name}}-error' aria-live="polite"></span>
+                                {{ field.errors }}
+                            </div><br>
+                        {% endfor %}
+                        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                        <!-- Sign up button to send the input values -->
+                        <button class="btn btn-primary" type="submit" value="Registrar" id="submit_button" >Registrar</button>
+                    </form>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<!-- jQuery Functions needed -->
+{% block custom_script %}
+
+{% endblock %}

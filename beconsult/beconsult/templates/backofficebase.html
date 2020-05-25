@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE  html>
+<!-- Default language for rendering all html files -->
+<html lang="en">
+<head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="" type="image/png" />
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+        <!-- Site title -->
+        <title>{% block title %}Beconsult{% endblock title %}</title>
+        {% block css %}
+            <link href="{% static 'bootstrap/dist/css/bootstrap.css' %}" rel="stylesheet">
+            <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+            <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}">
+            <link rel="stylesheet" href="{% static 'css/skins/_all-skins.min.css' %}">
+            <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+            <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+
+
+
+        {% endblock css %}
+
+        {% block custom_css %}
+
+        {% endblock %}
+
+    {% endblock head %}
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div id = "wrapper" >
+    <!-- Adding navigation bar to the site -->
+    <nav class="navbar navbar-default" style="margin-bottom: 0px">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="width: 70%;">
+                    <img alt="Brand" src="{% static "images/logo_2000.png" %}"style="max-width: 8%; cursor: default">
+                </a>
+                <ul class="nav navbar-nav navbar-right">
+                    {% if request.user.is_authenticated %}
+                        <li><a>Bienvenid@ {{ request.user.first_name }} {{ request.user.last_name }}</a></li>
+                    {% endif %}
+                    <li><a href="{% url 'logout' %}" >Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div id="cuerpo" class="row">
+
+
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="sidebar" >
+            {% include "sidebar.html" %}
+
+        </div>
+
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" id="content" style="padding-left:0;padding-right: 4%">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+<!-- References to needed frameworks (jQuery, Bootstrap, etc)-->
+{% block script %}
+    <script type="text/javascript" src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery/dist/jquery-ui.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/app.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap-notify.js' %}"></script>
+    <script type="text/javascript" src="{% static 'datatables.net/js/jquery.dataTables.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'datatables.net-responsive/js/dataTables.responsive.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery-validation/dist/jquery.validate.min.js' %}"></script>
+{% endblock %}
+
+{% block custom_script %}
+{% endblock %}
+</body>
+</html>

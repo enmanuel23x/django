@@ -1,0 +1,15 @@
+.fields{
+    width: 200px !important;
+    font-weight: bold;
+}
+
+input{
+    line-height: 25px;
+}
+
+#colcenter{
+    background: #fdfcfc;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}

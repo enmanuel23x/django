@@ -1,0 +1,52 @@
+{% extends "backofficebase.html" %}
+{% load static %}
+
+<!-- Reference to related css file -->
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'css/insc.css' %}" />
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="container" style="text-align: center">
+        <h3 style="text-align: center;font-weight: bold">Promedios de edades de los postulantes</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Promedio General</h3>
+                <div class="progress green">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                    <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                    <div class="progress-value">{{ promgeneral|floatformat:2 }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for carg in cargosobj %}
+                <div class="col-md-3 col-sm-6">
+                    <h3>{{ carg.name }}</h3>
+                    <div class="progress blue">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                        <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                        <div class="progress-value">{{ carg.prom|floatformat:2  }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
+
+<!-- jQuery Functions needed -->
+{% block custom_script %}
+
+
+{% endblock %}
