@@ -13,7 +13,7 @@ urlpatterns = [
     url(r'^csv/$', exportCsvView.as_view(), name='csv'),
     url(r'^mailSettings/$', MailSettings.as_view(), name='mailSettings'),
     url(r'^messageSettings/$', MessageSettings.as_view(), name='messageSettings'),
-    url(r'^', CandView.as_view(), name='home'),
+    url(r'^app/$', CandView.as_view(), name='home'),
     # ---------------------------------------- BACKOFFICE
     url(r'^dashboard/$', DashboardView.as_view(), name='dashboard'),
     url(r'^addTittle/$', AddTittleView.as_view(), name='addTittle'),

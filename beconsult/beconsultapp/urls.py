@@ -25,7 +25,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^', include(webUrls)),
-    url(r'^app/', include(becoUrls)),
+    url(r'^', include(becoUrls)),
     
 ]
 
