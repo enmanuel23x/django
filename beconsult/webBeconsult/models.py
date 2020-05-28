@@ -51,6 +51,7 @@ class JobOffer(models.Model):
     Title = models.CharField(max_length=120, null=True)
     Description = models.TextField(null=True)
     Tags_en_Perfil = models.TextField(max_length=250, null=True)
+    Offer_ID = models.PositiveIntegerField(default=1)
     # Creado y actualizado
     Created = models.DateTimeField(auto_now_add=True)
     Updated = models.DateTimeField(auto_now=True)
@@ -64,6 +65,8 @@ class JobOffer(models.Model):
     def __str__(self):
         """Unicode representation of JobOffer."""
         return self.Title
+    def getForm(self):
+        return ("/form/"+str(self.Offer_ID))
     def getTags(self):
         return str(self.Tags_en_Perfil).split("&")
             

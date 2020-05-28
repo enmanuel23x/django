@@ -139,7 +139,7 @@ class FormView(TemplateView):
             for q in questions:
                 qAns = QuestionsAndAnswers.objects.create(question=q.question, answer=post_values["questions"+str(q.id)],
                                                            postulacionId=newPostulacion)
-            mails = Mails.objects.all()[0]
+            mails = Mails.objects.all().first()
             # send email to the user
             data = {
                 'html': mails.postMail,
@@ -158,7 +158,7 @@ class FormView(TemplateView):
             subject = 'Beconsult - Nueva postulación'
             message = get_template('postBeconsultMail.html').render(data)
             send_html_email(subject, message, BECONSULT_EMAIL, BECONSULT_EMAIL)
-            message =  Message.objects.all()[0].messgPost
+            message =  Message.objects.all().first()
             messages.success(request, message)
             return redirect(reverse('form', kwargs={'pk': int(post_values['cargo'])}))
         else:
@@ -736,7 +736,7 @@ class MailSettings(LoginRequiredMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(MailSettings, self).get_context_data(**kwargs)
-        mail = Mails.objects.all()[0]
+        mail = Mails.objects.all().first()
 
         context['form'] = MailForm(instance=mail)
 
@@ -744,7 +744,7 @@ class MailSettings(LoginRequiredMixin, TemplateView):
 
     def post(self, request, *args, **kwargs):
         post_values = request.POST.copy()
-        mail = Mails.objects.all()[0]
+        mail = Mails.objects.all().first()
         form = MailForm(post_values, instance=mail)
 
         if form.is_valid():
@@ -761,13 +761,13 @@ class MessageSettings(LoginRequiredMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(MessageSettings, self).get_context_data(**kwargs)
-        message = Message.objects.all()[0]
+        message = Message.objects.all().first()
         context['form'] = MessageForm(instance=message)
         return context
 
     def post(self, request, *args, **kwargs):
         post_values = request.POST.copy()
-        message = Message.objects.all()[0]
+        message = Message.objects.all().first()
         form = MessageForm(post_values, instance=message)
 
         if form.is_valid():
@@ -803,7 +803,7 @@ def password_reset(request,
 
     
     if (extra_email_context['html'] is None) and (Mails.objects.all().count() > 0):
-            extra_email_context = {'html': Mails.objects.all()[0].pswMail}
+            extra_email_context = {'html': Mails.objects.all().first().pswMail}
     if post_reset_redirect is None:
         post_reset_redirect = reverse('password_reset_done')
     else:
