@@ -1,4 +1,5 @@
 from braces.views import LoginRequiredMixin
+from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth.views import deprecate_current_app
@@ -28,6 +29,7 @@ from django.utils.safestring import mark_safe
 
 BECONSULT_EMAIL = 'contactobeconsult@gmail.com'
 
+PERMISSION = ('beconsult.add_questionsandanswers', 'beconsult.add_questions', 'beconsult.delete_mails', 'beconsult.change_message', 'beconsult.add_joboffer', 'beconsult.change_questionsandanswers', 'beconsult.add_tittle', 'beconsult.add_mails', 'beconsult.add_message', 'beconsult.delete_message', 'beconsult.add_postulacion', 'beconsult.change_joboffer', 'beconsult.change_tittle', 'beconsult.change_questions', 'beconsult.change_mails', 'beconsult.delete_postulacion', 'beconsult.delete_joboffer', 'beconsult.delete_questionsandanswers', 'beconsult.change_postulacion', 'beconsult.delete_questions', 'beconsult.delete_tittle')
 
 # Seds a mail with the content subtype HTML.
 # @param [Sting] subject The mail subject.
@@ -45,9 +47,11 @@ def send_html_email(subject, message, email, from_email):
         print("<< Exception >>", ex)
 
 
-class SignUpView(LoginRequiredMixin, TemplateView):
+class SignUpView(PermissionRequiredMixin, TemplateView):
     template_name = 'signup.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
         context = super(SignUpView, self).get_context_data(**kwargs)
         context['form'] = UserForm()
@@ -67,9 +71,11 @@ class SignUpView(LoginRequiredMixin, TemplateView):
         return redirect('viewUsers')
 
 
-class DashboardView(LoginRequiredMixin, TemplateView):
+class DashboardView(PermissionRequiredMixin, TemplateView):
     template_name = 'dashboard.html'
 
+    permission_required = PERMISSION
+    
 
 # Form template view
 #
@@ -166,9 +172,11 @@ class FormView(TemplateView):
             return render(request, self.template_name, {'form1': form1, 'form2': form2, 'form3': form3})
 
 
-class AddTittleView(LoginRequiredMixin, TemplateView):
+class AddTittleView(PermissionRequiredMixin, TemplateView):
     template_name = 'add_tittle.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
         context = super(AddTittleView, self).get_context_data(**kwargs)
         context['form'] = TittleForm()
@@ -185,9 +193,11 @@ class AddTittleView(LoginRequiredMixin, TemplateView):
             return render(request, self.template_name, {'form': form})
 
 
-class TittleEdit(LoginRequiredMixin, TemplateView):
+class TittleEdit(PermissionRequiredMixin, TemplateView):
     template_name = 'edit_tittle.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
         context = super(TittleEdit, self).get_context_data(**kwargs)
         # try:
@@ -212,45 +222,55 @@ class TittleEdit(LoginRequiredMixin, TemplateView):
         return redirect('viewTittles')
 
 
-class DeleteTittleView(LoginRequiredMixin, TemplateView):
+class DeleteTittleView(PermissionRequiredMixin, TemplateView):
     template_name = 'add_tittle.html'
 
+    permission_required = PERMISSION
+    
     def get(self, request, *args, **kwargs):
         delete = Tittle.objects.get(pk=int(kwargs['pk']))
         delete.delete()
         return redirect('viewTittles')
 
 
-class ViewTittlesView(LoginRequiredMixin, TemplateView):
+class ViewTittlesView(PermissionRequiredMixin, TemplateView):
     template_name = 'view_tittles.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
         context = super(ViewTittlesView, self).get_context_data(**kwargs)
         context['titles'] = Tittle.objects.all()
         return context
 
 
-class ViewPostsView(LoginRequiredMixin, TemplateView):
+class ViewPostsView(PermissionRequiredMixin, TemplateView):
     template_name = 'view_post.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
         context = super(ViewPostsView, self).get_context_data(**kwargs)
         context['posts'] = Postulacion.objects.all()
         return context
 
 
-class ViewQuestionsView(LoginRequiredMixin, TemplateView):
+class ViewQuestionsView(PermissionRequiredMixin, TemplateView):
     template_name = 'view_questions.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
         context = super(ViewQuestionsView, self).get_context_data(**kwargs)
         context['questions'] = Questions.objects.all()
         return context
 
 
-class QuestionEdit(LoginRequiredMixin, TemplateView):
+class QuestionEdit(PermissionRequiredMixin, TemplateView):
     template_name = 'edit_question.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
         context = super(QuestionEdit, self).get_context_data(**kwargs)
         # try:
@@ -276,9 +296,11 @@ class QuestionEdit(LoginRequiredMixin, TemplateView):
         return redirect('viewQuestions')
 
 
-class AddQuestionView(LoginRequiredMixin, TemplateView):
+class AddQuestionView(PermissionRequiredMixin, TemplateView):
     template_name = 'add_question.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
         context = super(AddQuestionView, self).get_context_data(**kwargs)
         context['form'] = QuestionForm()
@@ -295,18 +317,22 @@ class AddQuestionView(LoginRequiredMixin, TemplateView):
             return render(request, self.template_name, {'form': form})
 
 
-class DeleteQuestionView(LoginRequiredMixin, TemplateView):
+class DeleteQuestionView(PermissionRequiredMixin, TemplateView):
     template_name = 'add_question.html'
 
+    permission_required = PERMISSION
+    
     def get(self, request, *args, **kwargs):
         delete = Questions.objects.get(pk=int(kwargs['pk']))
         delete.delete()
         return redirect('viewQuestions')
 
 
-class PostDetails(LoginRequiredMixin, TemplateView):
+class PostDetails(PermissionRequiredMixin, TemplateView):
     template_name = 'post_details.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
         context = super(PostDetails, self).get_context_data(**kwargs)
         # try:
@@ -315,9 +341,11 @@ class PostDetails(LoginRequiredMixin, TemplateView):
         return context
 
 
-class ApprovedPostView(LoginRequiredMixin, TemplateView):
+class ApprovedPostView(PermissionRequiredMixin, TemplateView):
     template_name = 'post_details.html'
 
+    permission_required = PERMISSION
+    
     def get(self, request, *args, **kwargs):
         post = Postulacion.objects.get(pk=int(kwargs['pk']))
         post.approved = True
@@ -325,9 +353,11 @@ class ApprovedPostView(LoginRequiredMixin, TemplateView):
         return redirect(reverse('viewPostsDetails', kwargs={'pk': int(kwargs['pk'])}))
 
 
-class NotApprovedPostView(LoginRequiredMixin, TemplateView):
+class NotApprovedPostView(PermissionRequiredMixin, TemplateView):
     template_name = 'post_details.html'
 
+    permission_required = PERMISSION
+    
     def get(self, request, *args, **kwargs):
         post = Postulacion.objects.get(pk=int(kwargs['pk']))
         post.approved = False
@@ -335,9 +365,11 @@ class NotApprovedPostView(LoginRequiredMixin, TemplateView):
         return redirect(reverse('viewPostsDetails', kwargs={'pk': int(kwargs['pk'])}))
 
 
-class AcceptedPostView(LoginRequiredMixin, TemplateView):
+class AcceptedPostView(PermissionRequiredMixin, TemplateView):
     template_name = 'post_details.html'
 
+    permission_required = PERMISSION
+    
     def get(self, request, *args, **kwargs):
         post = Postulacion.objects.get(pk=int(kwargs['pk']))
         try:
@@ -354,9 +386,11 @@ class AcceptedPostView(LoginRequiredMixin, TemplateView):
         return redirect(reverse('viewPostsDetails', kwargs={'pk': int(kwargs['pk'])}))
 
 
-class NotAcceptedPostView(LoginRequiredMixin, TemplateView):
+class NotAcceptedPostView(PermissionRequiredMixin, TemplateView):
     template_name = 'post_details.html'
 
+    permission_required = PERMISSION
+    
     def get(self, request, *args, **kwargs):
         post = Postulacion.objects.get(pk=int(kwargs['pk']))
         post.accepted = False
@@ -364,9 +398,11 @@ class NotAcceptedPostView(LoginRequiredMixin, TemplateView):
         return redirect(reverse('viewPostsDetails', kwargs={'pk': int(kwargs['pk'])}))
 
 
-class AddReasonView(LoginRequiredMixin, TemplateView):
+class AddReasonView(PermissionRequiredMixin, TemplateView):
     template_name = 'post_details.html'
 
+    permission_required = PERMISSION
+    
     def post(self, request, *args, **kwargs):
         post = Postulacion.objects.get(pk=int(kwargs['pk']))
         post_values = request.POST.copy()
@@ -375,8 +411,10 @@ class AddReasonView(LoginRequiredMixin, TemplateView):
         return redirect(reverse('viewPostsDetails', kwargs={'pk': int(kwargs['pk'])}))
 
 
-class InscView(LoginRequiredMixin, TemplateView):
+class InscView(PermissionRequiredMixin, TemplateView):
     template_name = 'insc.html'
+
+    permission_required = PERMISSION
 
     def get_context_data(self, **kwargs):
 
@@ -398,9 +436,10 @@ class InscView(LoginRequiredMixin, TemplateView):
         context['cargosobj'] = cargosobj
         return context
 
-
-class CandView(LoginRequiredMixin, TemplateView):
+class CandView(PermissionRequiredMixin, TemplateView):
     template_name = 'cand.html'
+
+    permission_required = PERMISSION
 
     def get_context_data(self, **kwargs):
         context = super(CandView, self).get_context_data(**kwargs)
@@ -410,11 +449,14 @@ class CandView(LoginRequiredMixin, TemplateView):
         context['approved'] = Postulacion.objects.filter(approved=True).count()
         context['noapproved'] = Postulacion.objects.filter(approved=False).count()
         return context
+        
 
 
-class AddOfferView(LoginRequiredMixin, TemplateView):
+class AddOfferView(PermissionRequiredMixin, TemplateView):
     template_name = 'add_offer.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
         context = super(AddOfferView, self).get_context_data(**kwargs)
         context['form'] = OfferForm()
@@ -431,27 +473,33 @@ class AddOfferView(LoginRequiredMixin, TemplateView):
             return render(request, self.template_name, {'form': form})
 
 
-class ViewOffersView(LoginRequiredMixin, TemplateView):
+class ViewOffersView(PermissionRequiredMixin, TemplateView):
     template_name = 'view_offers.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
         context = super(ViewOffersView, self).get_context_data(**kwargs)
         context['offers'] = JobOffer.objects.all()
         return context
 
 
-class DeleteOfferView(LoginRequiredMixin, TemplateView):
+class DeleteOfferView(PermissionRequiredMixin, TemplateView):
     template_name = 'view_offers.html'
 
+    permission_required = PERMISSION
+    
     def get(self, request, *args, **kwargs):
         delete = JobOffer.objects.get(pk=int(kwargs['pk']))
         delete.delete()
         return redirect('viewOffers')
 
 
-class OfferEdit(LoginRequiredMixin, TemplateView):
+class OfferEdit(PermissionRequiredMixin, TemplateView):
     template_name = 'edit_offer.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
         context = super(OfferEdit, self).get_context_data(**kwargs)
         # try:
@@ -476,18 +524,22 @@ class OfferEdit(LoginRequiredMixin, TemplateView):
         return redirect('viewOffers')
 
 
-class ViewUsersView(LoginRequiredMixin, TemplateView):
+class ViewUsersView(PermissionRequiredMixin, TemplateView):
     template_name = 'view_users.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
         context = super(ViewUsersView, self).get_context_data(**kwargs)
         context['users'] = User.objects.all().filter(is_superuser=False)
         return context
 
 
-class UserEdit(LoginRequiredMixin, TemplateView):
+class UserEdit(PermissionRequiredMixin, TemplateView):
     template_name = 'edit_user.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
         context = super(UserEdit, self).get_context_data(**kwargs)
         # try:
@@ -515,16 +567,18 @@ class UserEdit(LoginRequiredMixin, TemplateView):
         return redirect('viewUsers')
 
 
-class DeleteUserView(LoginRequiredMixin, TemplateView):
+class DeleteUserView(PermissionRequiredMixin, TemplateView):
     template_name = 'view_users.html'
 
+    permission_required = PERMISSION
+    
     def get(self, request, *args, **kwargs):
         delete = User.objects.get(pk=int(kwargs['pk']))
         delete.delete()
         return redirect('viewUsers')
 
 
-'''class AgeView(LoginRequiredMixin, TemplateView):
+'''class AgeView(PermissionRequiredMixin, TemplateView):
     template_name = 'age.html'
 
     def get_context_data(self, **kwargs):
@@ -552,9 +606,11 @@ class DeleteUserView(LoginRequiredMixin, TemplateView):
         return context
 '''
 
-class SalView(LoginRequiredMixin, TemplateView):
+class SalView(PermissionRequiredMixin, TemplateView):
     template_name = 'sal.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
 
         class cargo:
@@ -731,9 +787,11 @@ class mailView(TemplateView):
         return context
 
 
-class MailSettings(LoginRequiredMixin, TemplateView):
+class MailSettings(PermissionRequiredMixin, TemplateView):
     template_name = 'emailSettings.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
         context = super(MailSettings, self).get_context_data(**kwargs)
         mail = Mails.objects.all().first()
@@ -756,9 +814,11 @@ class MailSettings(LoginRequiredMixin, TemplateView):
 
         return redirect('mailSettings')
 
-class MessageSettings(LoginRequiredMixin, TemplateView):
+class MessageSettings(PermissionRequiredMixin, TemplateView):
     template_name = 'messageSettings.html'
 
+    permission_required = PERMISSION
+    
     def get_context_data(self, **kwargs):
         context = super(MessageSettings, self).get_context_data(**kwargs)
         message = Message.objects.all().first()

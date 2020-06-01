@@ -8,7 +8,6 @@ from django.contrib.auth.views import login, logout
 from django.contrib import admin
 
 urlpatterns = [
-    
     url(r'^form/(?P<pk>\d+)/$', FormView.as_view(), name='form'),
     url(r'^csv/$', exportCsvView.as_view(), name='csv'),
     url(r'^mailSettings/$', MailSettings.as_view(), name='mailSettings'),
