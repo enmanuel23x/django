@@ -60,7 +60,7 @@ django-suit==0.2.28
 
 django-suit-locale==1.0.10
 
-djangorestframework==3.4.0
+djangorestframework==3.11.2
 
 docker-py==1.7.2
 
