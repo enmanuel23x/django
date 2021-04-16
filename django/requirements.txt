@@ -40,7 +40,7 @@ django-cors-headers==2.1.0
 
 django-crontab==0.7.1
 
-django-debug-toolbar==1.4
+django-debug-toolbar==1.11.1
 
 django-filter==0.13.0
 
