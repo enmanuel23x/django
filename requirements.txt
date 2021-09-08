@@ -47,7 +47,7 @@ ndg-httpsclient==0.3.2
 oauthlib==2.0.6
 pathspec==0.3.4
 PIL==2.0+dummy
-Pillow==7.1.2
+Pillow==8.3.2
 piston-mini-client==0.7.5
 psycopg2==2.7.3.1
 pycparser==2.18
